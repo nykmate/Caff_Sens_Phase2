@@ -1,0 +1,481 @@
+---
+title: "Revised Caff Sens - ESM"
+author: "Nyiro Kovacs Mate"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(readr)
+library(dplyr)
+library(stringr)
+library(readxl)
+library(lmtest)
+library(car)
+library(lm.beta)
+library(lavaan)
+library(semTools)
+library(psych)
+library(GPArotation)
+library(BifactorIndicesCalculator)
+library(MVN)
+library(polycor)
+library(rsample)
+```
+
+```{r}
+caff_data <- read.csv("/Users/Giga/Desktop/caffeine_sensitivity_clean_revised.csv")
+caff_data <- caff_data[-(1:1197), ]
+caff_data <- caff_data[, c(
+  paste0("caff_intox_", 1:12),
+  paste0("caff_intox_revised_", 1:12),
+  "age",
+  "gender",
+  "PARTICIPANT_ID",
+  "caff_sens",
+  "caffeine_perday"
+  )]
+```
+
+```{r}
+efa_items <- caff_data[, paste0("caff_intox_revised", 1:12)]
+
+# Long format
+items_long <- efa_items %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = "item",
+    values_to = "response"
+  ) %>%
+  mutate(
+    item = factor(
+      item,
+      levels = paste0("caff_intox_revised", 1:12)
+    )
+  )
+  
+# Distribution plots - Revised items
+ggplot(items_long, aes(x = factor(response))) +
+  geom_bar() +
+  facet_wrap(~ item, ncol = 3, scales = "fixed") +
+  scale_x_discrete(
+    limits = c("1", "2", "3", "4", "5")
+  ) +
+  labs(
+    x = "Value",
+    y = "Frequency"
+  ) +
+  theme_minimal()
+```
+
+```{r}
+efa_items_2 <- caff_data[, paste0("caff_intox_", 1:12)]
+
+# Long format
+items_long_2 <- efa_items_2 %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = "item",
+    values_to = "response"
+  ) %>%
+  mutate(
+    item = factor(
+      item,
+      levels = paste0("caff_intox_", 1:12)
+    )
+  )
+  
+# Distrubution plots - Old items
+ggplot(items_long_2, aes(x = factor(response))) +
+  geom_bar() +
+  facet_wrap(~ item, ncol = 3, scales = "fixed") +
+  scale_x_discrete(
+    limits = c("1", "2", "3", "4", "5")
+  ) +
+  labs(
+    x = "Value",
+    y = "Frequency"
+  ) +
+  theme_minimal()
+```
+
+```{r}
+# Split Sample
+
+efa_items <- caff_data[, paste0("caff_intox_revised_", 1:12)]
+
+set.seed(2026)
+
+split <- initial_split(
+  efa_items,
+  prop = 0.60
+)
+
+efa_data <- training(split)
+cfa_data <- testing(split)
+```
+
+```{r}
+#Mardia
+mardia <- mvn(
+  data = efa_data,
+  mvn_test = "mardia"
+)
+
+mardia
+```
+
+```{r}
+#KMO
+R <- cor(
+  efa_data,
+  use = "pairwise.complete.obs"
+)
+
+KMO(R)
+```
+
+```{r}
+#Bartlett
+cortest.bartlett(
+  R,
+  n = nrow(efa_data)
+)
+```
+
+```{r}
+# EFA
+poly_cor <- hetcor(efa_data)$correlations
+
+efa <- fa(
+  poly_cor,
+  nfactors = 2,
+  fm = "pa",
+  rotate = "oblimin",
+  n.obs = 501
+)
+
+print(efa, cut = 0.30, sort = TRUE)
+```
+
+```{r}
+#Eigen value
+
+eigenvalues <- eigen(poly_cor)$values
+
+eigenvalues # 5.1533569 1.1587473 1.0238737... 
+```
+
+```{r}
+#Parallel analysis
+
+set.seed(1234)
+
+n <- nrow(efa_data)
+p <- ncol(efa_data)
+n_iter <- 100
+
+random_eigenvalues <- matrix(
+  NA,
+  nrow = n_iter,
+  ncol = p
+)
+
+for (i in 1:n_iter) {
+  
+  random_data <- matrix(
+    sample(
+      1:5,
+      size = n * p,
+      replace = TRUE
+    ),
+    nrow = n,
+    ncol = p
+  )
+  
+  random_cor <- hetcor(random_data)$correlations
+  
+  random_eigenvalues[i, ] <- eigen(random_cor)$values
+}
+
+mean_random_eigenvalues <- colMeans(random_eigenvalues)
+
+parallel_table <- data.frame(
+  Faktor = 1:p,
+  Real_Eigenvalue = eigenvalues,
+  Random_Eigenvalue = mean_random_eigenvalues
+)
+
+parallel_table #1 faktort javasol 
+```
+
+```{r}
+#Scree plot
+
+plot(
+  1:p,
+  eigenvalues,
+  type = "b",
+  pch = 19,
+  ylim = range(
+    c(eigenvalues, mean_random_eigenvalues)
+  ),
+  xlab = "Faktor",
+  ylab = "Eigenvalue",
+  main = "Parallel Analysis"
+)
+
+lines(
+  1:p,
+  mean_random_eigenvalues,
+  type = "b",
+  pch = 19,
+  lty = 2
+)
+
+legend(
+  "topright",
+  legend = c("Valódi adatok", "Random adatok"),
+  lty = c(1, 2),
+  pch = 19
+)
+```
+
+```{r}
+#Reliability
+
+reliability <- psych::alpha(efa_data)
+
+reliability$total #0.858
+
+omega_result <- psych::omega(
+  efa_data,
+  nfactors = 1
+)
+
+omega_result$omega.tot #0.876
+```
+
+```{r}
+#CFA - 1 Factor
+cfa_model <- '
+  F1 =~ caff_intox_revised_1 +
+        caff_intox_revised_2 +
+        caff_intox_revised_3 +
+        caff_intox_revised_4 +
+        caff_intox_revised_5 +
+        caff_intox_revised_6 +
+        caff_intox_revised_7 +
+        caff_intox_revised_8 +
+        caff_intox_revised_9 +
+        caff_intox_revised_10 +
+        caff_intox_revised_11 +
+        caff_intox_revised_12'
+
+fit_cfa <- cfa(
+  cfa_model,
+  data = cfa_data,
+  estimator = "WLSMV",
+  ordered = names(cfa_data)
+)
+
+summary(
+  fit_cfa,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
+
+#Robust CFI = 0.830
+#Robust TLI = 0.792
+#Robust RMSEA = 0.158
+#SRMR = 0.078
+```
+
+```{r}
+#CFA - 2 Factor
+cfa_model_2 <- '
+
+  F1 =~ caff_intox_revised_1 +
+        caff_intox_revised_2 +
+        caff_intox_revised_3 +
+        caff_intox_revised_4 +
+        caff_intox_revised_10
+
+  F2 =~ caff_intox_revised_5 +
+        caff_intox_revised_6 +
+        caff_intox_revised_7 +
+        caff_intox_revised_8 +
+        caff_intox_revised_9 +
+        caff_intox_revised_11 +
+        caff_intox_revised_12
+'
+
+fit_cfa_2 <- cfa(
+  cfa_model_2,
+  data = cfa_data,
+  estimator = "WLSMV",
+  ordered = names(cfa_data)
+)
+
+summary(
+  fit_cfa_2,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
+```
+
+```{r}
+#ESEM - First Order
+
+esem_model <- '
+  efa("block1")*F1 + F2 =~
+    caff_intox_revised_1 +
+    caff_intox_revised_2 +
+    caff_intox_revised_3 +
+    caff_intox_revised_4 +
+    caff_intox_revised_5 +
+    caff_intox_revised_6 +
+    caff_intox_revised_7 +
+    caff_intox_revised_8 +
+    caff_intox_revised_9 +
+    caff_intox_revised_10 +
+    caff_intox_revised_11 +
+    caff_intox_revised_12
+'
+fit_esem <- cfa(
+  esem_model,
+  data = cfa_data,
+  estimator = "WLSMV",
+  ordered = names(cfa_data),
+  rotation = "geomin"
+)
+
+summary(
+  fit_esem,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
+
+```
+
+```{r}
+higher_order_model <- '
+
+  # Elsőrendű faktorok
+  F1 =~ caff_intox_revised_1 +
+        caff_intox_revised_2 +
+        caff_intox_revised_3 +
+        caff_intox_revised_4 +
+        caff_intox_revised_10
+
+  F2 =~ caff_intox_revised_5 +
+        caff_intox_revised_6 +
+        caff_intox_revised_7 +
+        caff_intox_revised_8 +
+        caff_intox_revised_9 +
+        caff_intox_revised_11 +
+        caff_intox_revised_12
+'
+
+fit_higher <- cfa(
+  higher_order_model,
+  data = cfa_data,
+  estimator = "WLSMV",
+  ordered = c(
+    "caff_intox_revised_1",
+    "caff_intox_revised_2",
+    "caff_intox_revised_3",
+    "caff_intox_revised_4",
+    "caff_intox_revised_5",
+    "caff_intox_revised_6",
+    "caff_intox_revised_7",
+    "caff_intox_revised_8",
+    "caff_intox_revised_9",
+    "caff_intox_revised_10",
+    "caff_intox_revised_11",
+    "caff_intox_revised_12"
+  )
+)
+
+summary(
+  fit_higher,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
+```
+
+```{r}
+bifactor_model <- '
+
+  G =~ caff_intox_revised_1 +
+       caff_intox_revised_2 +
+       caff_intox_revised_3 +
+       caff_intox_revised_4 +
+       caff_intox_revised_5 +
+       caff_intox_revised_6 +
+       caff_intox_revised_7 +
+       caff_intox_revised_8 +
+       caff_intox_revised_9 +
+       caff_intox_revised_10 +
+       caff_intox_revised_11 +
+       caff_intox_revised_12
+
+  F1 =~ caff_intox_revised_1 +
+        caff_intox_revised_2 +
+        caff_intox_revised_3 +
+        caff_intox_revised_4 +
+        caff_intox_revised_10
+
+  F2 =~ caff_intox_revised_5 +
+        caff_intox_revised_6 +
+        caff_intox_revised_7 +
+        caff_intox_revised_8 +
+        caff_intox_revised_9 +
+        caff_intox_revised_11 +
+        caff_intox_revised_12
+
+  G ~~ 0*F1
+  G ~~ 0*F2
+  F1 ~~ 0*F2
+'
+
+fit_bifactor <- cfa(
+  bifactor_model,
+  data = cfa_data,
+  estimator = "WLSMV",
+  ordered = c(
+    "caff_intox_revised_1",
+    "caff_intox_revised_2",
+    "caff_intox_revised_3",
+    "caff_intox_revised_4",
+    "caff_intox_revised_5",
+    "caff_intox_revised_6",
+    "caff_intox_revised_7",
+    "caff_intox_revised_8",
+    "caff_intox_revised_9",
+    "caff_intox_revised_10",
+    "caff_intox_revised_11",
+    "caff_intox_revised_12"
+  )
+)
+
+summary(
+  fit_bifactor,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
+```
+
+```{r}
+items <- cfa_data[, paste0("caff_intox_revised_", 1:12)]
+
+alpha(items) #0.88
+omega(items, nfactors = 2) # 0.90, 0.85, 0.81
+```
+
+```{r}
+
+```
