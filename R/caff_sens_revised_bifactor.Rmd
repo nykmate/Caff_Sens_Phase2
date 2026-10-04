@@ -7,7 +7,348 @@ editor_options:
 ---
 
 ```{r}
+library(tidyverse)
+library(ggplot2)
+library(readr)
+library(dplyr)
+library(stringr)
+library(readxl)
+library(lmtest)
+library(car)
+library(lm.beta)
+library(lavaan)
+library(semTools)
+library(psych)
+library(GPArotation)
+library(BifactorIndicesCalculator)
+library(MVN)
+library(polycor)
+library(rsample)
+```
 
+```{r}
+caff_data <- read.csv("data/raw/caffeine_sensitivity_clean copy.csv") %>%
+  filter(if_all(caff_intox_revised_1:caff_intox_revised_12, ~ !is.na(.))) %>%
+  select(caff_intox_1:caff_intox_12, caff_intox_revised_1:caff_intox_revised_12) %>%
+  mutate(
+    across(
+      c(caff_intox_1:caff_intox_12,
+        caff_intox_revised_1:caff_intox_revised_12),
+      ~ ordered(.)
+    ))
+```
+
+```{r}
+#ESEM - Bifactor Model
+bifactor_model <- '
+
+  G =~ caff_intox_revised_1 +
+       caff_intox_revised_2 +
+       caff_intox_revised_3 +
+       caff_intox_revised_4 +
+       caff_intox_revised_5 +
+       caff_intox_revised_6 +
+       caff_intox_revised_7 +
+       caff_intox_revised_8 +
+       caff_intox_revised_9 +
+       caff_intox_revised_10 +
+       caff_intox_revised_11 +
+       caff_intox_revised_12
+
+  F1 =~ caff_intox_revised_1 +
+        caff_intox_revised_2 +
+        caff_intox_revised_3 +
+        caff_intox_revised_4 +
+        caff_intox_revised_10
+
+  F2 =~ caff_intox_revised_5 +
+        caff_intox_revised_6 +
+        caff_intox_revised_7 +
+        caff_intox_revised_8 +
+        caff_intox_revised_9 +
+        caff_intox_revised_11 +
+        caff_intox_revised_12
+
+  G ~~ 0*F1
+  G ~~ 0*F2
+  F1 ~~ 0*F2
+'
+
+fit_bifactor <- cfa(
+  bifactor_model,
+  data = caff_data,
+  estimator = "WLSMV",
+  ordered = TRUE,
+  std.lv = TRUE
+)
+
+summary(
+  fit_bifactor,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
+```
+
+```{r}
+modindices(fit_bifactor, sort. = TRUE, minimum.value = 9)
+```
+
+```{r}
+bifactor_model_indices <- '
+
+  G =~ caff_intox_revised_1 +
+       caff_intox_revised_2 +
+       caff_intox_revised_3 +
+       caff_intox_revised_4 +
+       caff_intox_revised_5 +
+       caff_intox_revised_6 +
+       caff_intox_revised_7 +
+       caff_intox_revised_8 +
+       caff_intox_revised_9 +
+       caff_intox_revised_10 +
+       caff_intox_revised_11 +
+       caff_intox_revised_12
+
+  F1 =~ caff_intox_revised_1 +
+        caff_intox_revised_2 +
+        caff_intox_revised_3 +
+        caff_intox_revised_4 +
+        caff_intox_revised_10
+
+  F2 =~ caff_intox_revised_5 +
+        caff_intox_revised_6 +
+        caff_intox_revised_7 +
+        caff_intox_revised_8 +
+        caff_intox_revised_9 +
+        caff_intox_revised_11 +
+        caff_intox_revised_12
+
+  G ~~ 0*F1
+  G ~~ 0*F2
+  F1 ~~ 0*F2
+
+  caff_intox_revised_1 ~~ caff_intox_revised_4
+  caff_intox_revised_5 ~~ caff_intox_revised_11
+  caff_intox_revised_2 ~~ caff_intox_revised_3
+'
+
+fit_bifactor_indices <- cfa(
+  bifactor_model_indices,
+  data = caff_data,
+  estimator = "WLSMV",
+  ordered = TRUE,
+  std.lv = TRUE
+)
+
+summary(
+  fit_bifactor_indices,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
+```
+
+```{r}
+bifactor_model_drop1 <- '
+
+  G =~ caff_intox_revised_2 +
+       caff_intox_revised_3 +
+       caff_intox_revised_4 +
+       caff_intox_revised_5 +
+       caff_intox_revised_6 +
+       caff_intox_revised_7 +
+       caff_intox_revised_8 +
+       caff_intox_revised_9 +
+       caff_intox_revised_10 +
+       caff_intox_revised_11 +
+       caff_intox_revised_12
+
+  F1 =~ caff_intox_revised_2 +
+        caff_intox_revised_3 +
+        caff_intox_revised_4 +
+        caff_intox_revised_10
+
+  F2 =~ caff_intox_revised_5 +
+        caff_intox_revised_6 +
+        caff_intox_revised_7 +
+        caff_intox_revised_8 +
+        caff_intox_revised_9 +
+        caff_intox_revised_11 +
+        caff_intox_revised_12
+
+  G ~~ 0*F1
+  G ~~ 0*F2
+  F1 ~~ 0*F2
+'
+
+fit_bifactor_drop1 <- cfa(
+  bifactor_model_drop1,
+  data = caff_data,
+  estimator = "WLSMV",
+  ordered = TRUE,
+  std.lv = TRUE
+)
+
+summary(
+  fit_bifactor_drop1,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
+```
+
+```{r}
+modindices(fit_bifactor_drop1, sort. = TRUE, minimum.value = 9)
+```
+
+```{r}
+bifactor_model_drop1_indices <- '
+
+  G =~ caff_intox_revised_2 +
+       caff_intox_revised_3 +
+       caff_intox_revised_4 +
+       caff_intox_revised_5 +
+       caff_intox_revised_6 +
+       caff_intox_revised_7 +
+       caff_intox_revised_8 +
+       caff_intox_revised_9 +
+       caff_intox_revised_10 +
+       caff_intox_revised_11 +
+       caff_intox_revised_12
+
+  F1 =~ caff_intox_revised_2 +
+        caff_intox_revised_3 +
+        caff_intox_revised_4 +
+        caff_intox_revised_10
+
+  F2 =~ caff_intox_revised_5 +
+        caff_intox_revised_6 +
+        caff_intox_revised_7 +
+        caff_intox_revised_8 +
+        caff_intox_revised_9 +
+        caff_intox_revised_11 +
+        caff_intox_revised_12
+
+  G ~~ 0*F1
+  G ~~ 0*F2
+  F1 ~~ 0*F2
+
+  caff_intox_revised_5 ~~ caff_intox_revised_11
+'
+
+fit_bifactor_drop1_indices <- cfa(
+  bifactor_model_drop1_indices,
+  data = caff_data,
+  estimator = "WLSMV",
+  ordered = TRUE,
+  std.lv = TRUE
+)
+
+summary(
+  fit_bifactor_drop1_indices,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
+```
+
+```{r}
+bifactor_model_drop6 <- '
+
+  G =~ caff_intox_revised_1 +
+       caff_intox_revised_2 +
+       caff_intox_revised_3 +
+       caff_intox_revised_4 +
+       caff_intox_revised_5 +
+       caff_intox_revised_7 +
+       caff_intox_revised_8 +
+       caff_intox_revised_9 +
+       caff_intox_revised_10 +
+       caff_intox_revised_11 +
+       caff_intox_revised_12
+
+  F1 =~ caff_intox_revised_1 +
+        caff_intox_revised_2 +
+        caff_intox_revised_3 +
+        caff_intox_revised_4 +
+        caff_intox_revised_10
+
+  F2 =~ caff_intox_revised_5 +
+        caff_intox_revised_7 +
+        caff_intox_revised_8 +
+        caff_intox_revised_9 +
+        caff_intox_revised_11 +
+        caff_intox_revised_12
+
+  G ~~ 0*F1
+  G ~~ 0*F2
+  F1 ~~ 0*F2
+'
+
+fit_bifactor_drop6 <- cfa(
+  bifactor_model_drop6,
+  data = caff_data,
+  estimator = "WLSMV",
+  ordered = TRUE,
+  std.lv = TRUE
+)
+
+summary(
+  fit_bifactor_drop6,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
+```
+
+```{r}
+modindices(fit_bifactor_drop6, sort. = TRUE, minimum.value = 9)
+```
+
+```{r}
+bifactor_model_drop6_indices <- '
+
+  G =~ caff_intox_revised_1 +
+       caff_intox_revised_2 +
+       caff_intox_revised_3 +
+       caff_intox_revised_4 +
+       caff_intox_revised_5 +
+       caff_intox_revised_7 +
+       caff_intox_revised_8 +
+       caff_intox_revised_9 +
+       caff_intox_revised_10 +
+       caff_intox_revised_11 +
+       caff_intox_revised_12
+
+  F1 =~ caff_intox_revised_1 +
+        caff_intox_revised_2 +
+        caff_intox_revised_3 +
+        caff_intox_revised_4 +
+        caff_intox_revised_10
+
+  F2 =~ caff_intox_revised_5 +
+        caff_intox_revised_7 +
+        caff_intox_revised_8 +
+        caff_intox_revised_9 +
+        caff_intox_revised_11 +
+        caff_intox_revised_12
+
+  G ~~ 0*F1
+  G ~~ 0*F2
+  F1 ~~ 0*F2
+
+  caff_intox_revised_5 ~~ caff_intox_revised_11
+'
+
+fit_bifactor_drop6_indices <- cfa(
+  bifactor_model_drop6_indices,
+  data = caff_data,
+  estimator = "WLSMV",
+  ordered = TRUE,
+  std.lv = TRUE
+)
+
+summary(
+  fit_bifactor_drop6_indices,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
 ```
 
 ```{r}
