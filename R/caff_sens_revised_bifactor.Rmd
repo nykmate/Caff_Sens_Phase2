@@ -27,7 +27,7 @@ library(rsample)
 ```
 
 ```{r}
-caff_data <- read.csv("data/raw/caffeine_sensitivity_clean copy.csv") %>%
+caff_data <- read_csv("data/raw/caffeine_sensitivity_clean copy.csv") %>%
   filter(if_all(caff_intox_revised_1:caff_intox_revised_12, ~ !is.na(.))) %>%
   select(caff_intox_1:caff_intox_12, caff_intox_revised_1:caff_intox_revised_12) %>%
   mutate(
@@ -90,7 +90,7 @@ summary(
 ```
 
 ```{r}
-modindices(fit_bifactor, sort. = TRUE, minimum.value = 9)
+modindices(fit_bifactor, sort. = TRUE)
 ```
 
 ```{r}
@@ -148,6 +148,10 @@ summary(
 ```
 
 ```{r}
+modindices(fit_bifactor_indices, sort. = TRUE)
+```
+
+```{r}
 bifactor_model_drop1 <- '
 
   G =~ caff_intox_revised_2 +
@@ -196,7 +200,7 @@ summary(
 ```
 
 ```{r}
-modindices(fit_bifactor_drop1, sort. = TRUE, minimum.value = 9)
+modindices(fit_bifactor_drop1, sort. = TRUE)
 ```
 
 ```{r}
@@ -352,5 +356,53 @@ summary(
 ```
 
 ```{r}
+bifactor_model_drop2 <- '
 
+  G =~ caff_intox_revised_1 +
+       caff_intox_revised_3 +
+       caff_intox_revised_4 +
+       caff_intox_revised_5 +
+       caff_intox_revised_6 +
+       caff_intox_revised_7 +
+       caff_intox_revised_8 +
+       caff_intox_revised_9 +
+       caff_intox_revised_10 +
+       caff_intox_revised_11 +
+       caff_intox_revised_12
+
+  F1 =~ caff_intox_revised_1 +
+        caff_intox_revised_3 +
+        caff_intox_revised_4 +
+        caff_intox_revised_10
+
+  F2 =~ caff_intox_revised_5 +
+        caff_intox_revised_6 +
+        caff_intox_revised_7 +
+        caff_intox_revised_8 +
+        caff_intox_revised_9 +
+        caff_intox_revised_11 +
+        caff_intox_revised_12
+
+  G ~~ 0*F1
+  G ~~ 0*F2
+  F1 ~~ 0*F2
+'
+
+fit_bifactor_drop2 <- cfa(
+  bifactor_model_drop2,
+  data = caff_data,
+  estimator = "WLSMV",
+  ordered = TRUE,
+  std.lv = TRUE
+)
+
+summary(
+  fit_bifactor_drop2,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
+```
+
+```{r}
+modindices(fit_bifactor_drop2, sort. = TRUE)
 ```
