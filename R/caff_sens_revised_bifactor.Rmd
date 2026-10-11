@@ -513,5 +513,72 @@ summary(
 ```
 
 ```{r}
-modindices(fit_bifactor_6double, sort. = TRUE)
+compRelSEM(fit_bifactor_final)
+```
+
+```{r}
+modindices(fit_bifactor_final, sort. = TRUE)
+```
+
+```{r}
+#Final structure rework: item 2 and 3 removed from F1
+bifactor_model_final_rework <- '
+
+  G =~ caff_intox_revised_1 +
+       caff_intox_revised_2 +
+       caff_intox_revised_3 +
+       caff_intox_revised_4 +
+       caff_intox_revised_5 +
+       caff_intox_revised_6 +
+       caff_intox_revised_7 +
+       caff_intox_revised_8 +
+       caff_intox_revised_9 +
+       caff_intox_revised_10 +
+       caff_intox_revised_12
+
+  F1 =~ caff_intox_revised_1 +
+        caff_intox_revised_4 +
+        caff_intox_revised_6
+
+  F2 =~ caff_intox_revised_5 +
+        caff_intox_revised_6 +
+        caff_intox_revised_7 +
+        caff_intox_revised_8 +
+        caff_intox_revised_9 +
+        caff_intox_revised_10 +
+        caff_intox_revised_12
+
+  G ~~ 0*F1
+  G ~~ 0*F2
+  F1 ~~ 0*F2
+'
+
+fit_bifactor_final_rework <- cfa(
+  bifactor_model_final_rework,
+  data = caff_data,
+  estimator = "WLSMV",
+  ordered = TRUE,
+  std.lv = TRUE
+)
+
+summary(
+  fit_bifactor_final_rework,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
+```
+
+```{r}
+compRelSEM(fit_bifactor_final_rework)
+
+items <- lavaan::lavNames(fit_bifactor_final_rework, type = "ov")
+
+psych::alpha(
+  caff_data[, items] |> 
+    dplyr::mutate(dplyr::across(everything(), as.numeric))
+)$total$raw_alpha
+```
+
+```{r}
+
 ```
