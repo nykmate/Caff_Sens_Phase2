@@ -514,6 +514,13 @@ summary(
 
 ```{r}
 compRelSEM(fit_bifactor_final)
+
+items <- lavaan::lavNames(fit_bifactor_final, type = "ov")
+
+psych::alpha(
+  caff_data[, items] |> 
+    dplyr::mutate(dplyr::across(everything(), as.numeric))
+)$total$raw_alpha
 ```
 
 ```{r}

@@ -1,0 +1,227 @@
+---
+title: "Revised Caff Sens - Exploratory Analysis"
+author: "Nyiro Kovacs Mate"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(readr)
+library(dplyr)
+library(stringr)
+library(readxl)
+library(lmtest)
+library(car)
+library(lm.beta)
+library(lavaan)
+library(semTools)
+library(psych)
+library(GPArotation)
+library(BifactorIndicesCalculator)
+library(MVN)
+library(polycor)
+library(rsample)
+```
+
+```{r}
+caff_data <- read_csv("data/raw/caffeine_sensitivity_clean copy.csv") %>%
+  filter(if_all(caff_intox_revised_1:caff_intox_revised_12, ~ !is.na(.))) %>%
+  select(caff_intox_1:caff_intox_12, caff_intox_revised_1:caff_intox_revised_12) %>%
+  mutate(
+    across(
+      c(caff_intox_1:caff_intox_12,
+        caff_intox_revised_1:caff_intox_revised_12),
+      ~ factor(.)
+    ))
+```
+
+```{r}
+# Distribution plots - Revised items
+efa_items <- caff_data[, paste0("caff_intox_revised_", 1:12)]
+
+# Long format
+items_long <- efa_items %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = "item",
+    values_to = "response"
+  ) %>%
+  mutate(
+    item = factor(
+      item,
+      levels = paste0("caff_intox_revised_", 1:12)
+    )
+  )
+  
+ggplot(items_long, aes(x = factor(response))) +
+  geom_bar() +
+  facet_wrap(~ item, ncol = 3, scales = "fixed") +
+  scale_x_discrete(
+    limits = c("1", "2", "3", "4", "5")
+  ) +
+  labs(
+    x = "Value",
+    y = "Frequency"
+  ) +
+  theme_minimal()
+```
+
+```{r}
+# Distrubution plots - Old items
+efa_items_2 <- caff_data[, paste0("caff_intox_", 1:12)]
+
+# Long format
+items_long_2 <- efa_items_2 %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = "item",
+    values_to = "response"
+  ) %>%
+  mutate(
+    item = factor(
+      item,
+      levels = paste0("caff_intox_", 1:12)
+    )
+  )
+  
+ggplot(items_long_2, aes(x = factor(response))) +
+  geom_bar() +
+  facet_wrap(~ item, ncol = 3, scales = "fixed") +
+  scale_x_discrete(
+    limits = c("1", "2", "3", "4", "5")
+  ) +
+  labs(
+    x = "Value",
+    y = "Frequency"
+  ) +
+  theme_minimal()
+```
+
+```{r}
+#Mardia
+mardia <- mvn(
+  data = caff_data,
+  mvn_test = "mardia"
+)
+
+mardia
+```
+
+```{r}
+#KMO
+R <- cor(
+  caff_data,
+  use = "pairwise.complete.obs"
+)
+
+KMO(R)
+```
+
+```{r}
+#Bartlett
+cortest.bartlett(
+  R,
+  n = nrow(caff_data)
+)
+```
+
+```{r}
+# EFA
+poly_cor <- hetcor(caff_data)$correlations
+
+efa <- fa(
+  poly_cor,
+  nfactors = 2,
+  fm = "pa",
+  rotate = "oblimin",
+  n.obs = 501
+)
+
+print(efa, cut = 0.30, sort = TRUE)
+```
+
+```{r}
+#Eigen value
+
+eigenvalues <- eigen(poly_cor)$values
+
+eigenvalues # 5.1533569 1.1587473 1.0238737... 
+```
+
+```{r}
+#Parallel analysis
+
+set.seed(1234)
+
+n <- nrow(efa_data)
+p <- ncol(efa_data)
+n_iter <- 100
+
+random_eigenvalues <- matrix(
+  NA,
+  nrow = n_iter,
+  ncol = p
+)
+
+for (i in 1:n_iter) {
+  
+  random_data <- matrix(
+    sample(
+      1:5,
+      size = n * p,
+      replace = TRUE
+    ),
+    nrow = n,
+    ncol = p
+  )
+  
+  random_cor <- hetcor(random_data)$correlations
+  
+  random_eigenvalues[i, ] <- eigen(random_cor)$values
+}
+
+mean_random_eigenvalues <- colMeans(random_eigenvalues)
+
+parallel_table <- data.frame(
+  Faktor = 1:p,
+  Real_Eigenvalue = eigenvalues,
+  Random_Eigenvalue = mean_random_eigenvalues
+)
+
+parallel_table #1 faktort javasol 
+```
+
+```{r}
+#Scree plot
+
+plot(
+  1:p,
+  eigenvalues,
+  type = "b",
+  pch = 19,
+  ylim = range(
+    c(eigenvalues, mean_random_eigenvalues)
+  ),
+  xlab = "Faktor",
+  ylab = "Eigenvalue",
+  main = "Parallel Analysis"
+)
+
+lines(
+  1:p,
+  mean_random_eigenvalues,
+  type = "b",
+  pch = 19,
+  lty = 2
+)
+
+legend(
+  "topright",
+  legend = c("Valódi adatok", "Random adatok"),
+  lty = c(1, 2),
+  pch = 19
+)
+```
