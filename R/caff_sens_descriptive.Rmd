@@ -1,0 +1,92 @@
+---
+title: "Caff Sens - Descriptive Statistics"
+author: "Nyiro Kovacs Mate"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(readr)
+library(dplyr)
+library(stringr)
+library(readxl)
+library(lmtest)
+library(car)
+library(lm.beta)
+library(lavaan)
+library(semTools)
+library(psych)
+library(GPArotation)
+library(BifactorIndicesCalculator)
+library(MVN)
+library(polycor)
+library(rsample)
+```
+
+```{r}
+caff_revised_exploratory <- read_csv("data/raw/caffeine_sensitivity_clean copy.csv") %>%
+  filter(if_all(caff_intox_revised_1:caff_intox_revised_12, ~ !is.na(.))) %>%
+  select(caff_intox_1:caff_intox_12, caff_intox_revised_1:caff_intox_revised_12, age, gender, caff_sens, caffeine_perday) %>%
+  mutate(
+    across(
+      c(caff_intox_1:caff_intox_12,
+        caff_intox_revised_1:caff_intox_revised_12),
+      ~ factor(.)
+    ))
+```
+
+```{r}
+caff_revised_exploratory %>%
+  count(gender)
+```
+
+```{r}
+caff_revised_exploratory %>%
+  summarise(
+    mean_age = mean(age, na.rm = TRUE),
+    sd_age = sd(age, na.rm = TRUE)
+  )
+```
+
+```{r}
+caff_revised_exploratory %>%
+  count(caff_sens)
+```
+
+```{r}
+caff_revised_exploratory %>%
+  count(caffeine_perday)
+```
+
+```{r}
+caff_exploratory <- read_csv("data/raw/caffeine_sensitivity_clean copy.csv") %>%
+  mutate(start_date = as.Date(start_date)) %>%
+  filter(start_date < as.Date("2025-05-21")) %>%
+  select(age, gender, caff_sens, caffeine_perday)
+```
+
+```{r}
+caff_exploratory %>%
+  count(gender)
+```
+
+```{r}
+caff_exploratory %>%
+  summarise(
+    mean_age = mean(age, na.rm = TRUE),
+    sd_age = sd(age, na.rm = TRUE)
+  )
+```
+
+```{r}
+caff_exploratory %>%
+  count(caff_sens)
+```
+
+```{r}
+caff_exploratory %>%
+  count(caffeine_perday)
+```
