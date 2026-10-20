@@ -1,0 +1,45 @@
+---
+title: "Caff Scale - Measurement Invariance"
+author: "Nyiro Kovacs Mate"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(readr)
+library(dplyr)
+library(stringr)
+library(readxl)
+library(lmtest)
+library(car)
+library(lm.beta)
+library(lavaan)
+library(semTools)
+library(psych)
+library(GPArotation)
+library(BifactorIndicesCalculator)
+library(MVN)
+library(polycor)
+library(rsample)
+```
+
+```{r}
+#Importing datasets and joining them: @nykmate
+english <- read_csv("data/raw/caffeine_sensitivity_english_clean.csv") %>%
+  filter(caff_intox_revised_13 == 4) %>%
+  mutate(sample = "English") %>%
+  select(sample, age, gender, caff_sens, caffeine_perday, caff_intox_revised_1:caff_intox_revised_12)
+
+hungarian <- read_csv("data/raw/caffeine_sensitivity_clean copy.csv") %>%
+  filter(if_all(
+      all_of(paste0("caff_intox_revised_", 1:12)),
+      ~ !is.na(.x))) %>%
+  mutate(caff_sens = factor(caff_sens, levels = c(0, 1), labels = c("No", "Yes"))) %>%
+  mutate(sample = "Hungarian") %>%
+  select(sample, age, gender, caff_sens, caffeine_perday, caff_intox_revised_1:caff_intox_revised_12)
+
+caff_sens_invariance <- bind_rows(english, hungarian)
+```
