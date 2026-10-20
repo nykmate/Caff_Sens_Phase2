@@ -29,13 +29,7 @@ library(rsample)
 ```{r}
 caff_revised_exploratory <- read_csv("data/raw/caffeine_sensitivity_clean copy.csv") %>%
   filter(if_all(caff_intox_revised_1:caff_intox_revised_12, ~ !is.na(.))) %>%
-  select(caff_intox_1:caff_intox_12, caff_intox_revised_1:caff_intox_revised_12, age, gender, caff_sens, caffeine_perday) %>%
-  mutate(
-    across(
-      c(caff_intox_1:caff_intox_12,
-        caff_intox_revised_1:caff_intox_revised_12),
-      ~ factor(.)
-    ))
+  select(age, gender, caff_sens, caffeine_perday)
 ```
 
 ```{r}
@@ -88,5 +82,34 @@ caff_exploratory %>%
 
 ```{r}
 caff_exploratory %>%
+  count(caffeine_perday)
+```
+
+```{r}
+caff_sens_english <- read_csv("data/raw/caffeine_sensitivity_english_clean.csv") %>%
+  filter(caff_intox_revised_13 == 4) %>%
+  select(age, gender, caff_sens, caffeine_perday)
+```
+
+```{r}
+caff_sens_english %>%
+  count(gender)
+```
+
+```{r}
+caff_sens_english %>%
+  summarise(
+    mean_age = mean(age, na.rm = TRUE),
+    sd_age = sd(age, na.rm = TRUE)
+  )
+```
+
+```{r}
+caff_sens_english %>%
+  count(caff_sens)
+```
+
+```{r}
+caff_sens_english %>%
   count(caffeine_perday)
 ```
