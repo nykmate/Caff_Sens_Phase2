@@ -41,7 +41,7 @@ caff_data <- caff_data[, c(
 ```
 
 ```{r}
-efa_items <- caff_data[, paste0("caff_intox_revised", 1:12)]
+efa_items <- caff_data[, paste0("caff_intox_revised_", 1:12)]
 
 # Long format
 items_long <- efa_items %>%

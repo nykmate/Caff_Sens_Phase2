@@ -1,0 +1,519 @@
+"PROLIFIC_PID","age","gender","occupation","caff_sens","caffeine_perday","caff_intox_revised_1","caff_intox_revised_2","caff_intox_revised_3","caff_intox_revised_4","caff_intox_revised_5","caff_intox_revised_6","caff_intox_revised_7","caff_intox_revised_8","caff_intox_revised_9","caff_intox_revised_10","caff_intox_revised_11","caff_intox_revised_12","caff_intox_revised_13"
+"69f2365175809537a471ea61",20,"Male","Student","No","2: 160-320 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"655f972cbc7b681ef0fdc0bd",30,"Female","Employee","Yes","0: No Caffeine (0 mg)",2,1,1,4,1,1,1,1,1,1,1,1,4
+"5e76d2652d882b2481d65066",26,"Female","Employee","No","0: No Caffeine (0 mg)",2,2,1,3,1,1,1,2,1,1,1,1,4
+"60e9fd8a2f52070be49cf317",26,"Male","Employee","Yes","1: max. 160 mg/day",2,2,1,3,1,2,1,3,2,3,1,1,4
+"5dcc5fee28e3148e8009491e",28,"Male","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"6a00f9c2a0c8661819099e57",24,"Female","Employee","No","1: max. 160 mg/day",2,3,3,2,1,3,4,1,3,5,1,1,4
+"6a04d7f12b8bb399ed1a4c22",19,"Male","Student","No","3: More than 320 mg/day",1,1,1,3,1,1,1,3,2,1,1,1,4
+"6a01414ef9ccd72908583ebc",19,"Male","Student","No","1: max. 160 mg/day",2,1,1,3,1,1,1,2,1,3,1,1,4
+"688126c11792fdd556ecafb7",27,"Female","Employee","No","0: No Caffeine (0 mg)",2,1,1,2,2,1,1,2,1,1,1,1,4
+"69d74a4286c01f4c11643c1d",27,"Male","Employee","No","2: 160-320 mg/day",3,2,1,3,1,1,2,1,1,1,1,1,4
+"6785891aee9028790a1bd6fc",20,"Female","Student","No","2: 160-320 mg/day",2,2,1,3,1,2,3,2,2,2,1,1,4
+"6a04c643e5fe9ea9c135a9cf",22,"Male","Student","No","3: More than 320 mg/day",1,2,1,3,1,1,3,1,1,1,1,1,4
+"69efd6b0a093516b899d9ff2",30,"Male","Employee","No","1: max. 160 mg/day",2,2,2,5,3,3,3,1,2,1,1,1,4
+"6115bb731c445ab5a7289b9e",23,"Female","Employee","No","1: max. 160 mg/day",1,2,1,3,1,1,1,1,1,2,1,1,4
+"69f22008fae056c9007d433d",22,"Male","Student","Yes","1: max. 160 mg/day",3,3,2,5,1,2,2,2,3,3,1,1,4
+"66d0ac55c071f86833bfacb7",27,"Female","Employee","No","3: More than 320 mg/day",2,3,1,1,2,2,4,2,4,1,1,2,4
+"6236fe0ee063333a3e1ba72a",27,"Female","Employee","Yes","2: 160-320 mg/day",1,2,1,1,1,1,3,1,1,1,1,1,4
+"69b1b9c93046383751d6fe0c",30,"Male","Employee","Yes","2: 160-320 mg/day",4,4,5,4,4,4,3,3,4,3,3,3,4
+"659ab33c0a427599bec1b554",22,"Female","Student","No","1: max. 160 mg/day",3,3,2,4,1,3,3,2,3,4,1,3,4
+"5a78f57a2a842c0001fc43db",29,"Female","Employee","Yes","1: max. 160 mg/day",2,4,1,1,1,2,5,5,3,1,1,1,4
+"632d68dde8d04677f58d963c",28,"Male","Employee","No","3: More than 320 mg/day",1,1,1,1,3,1,3,1,1,4,5,1,4
+"6a03ca75fd6a42d57d706f90",19,"Female","Student","No","2: 160-320 mg/day",4,1,3,5,1,2,1,4,5,5,4,2,4
+"69e507caadb9d7748ba5b7f3",26,"Female","Employee","No","1: max. 160 mg/day",2,2,1,1,2,1,2,2,1,1,1,1,4
+"6113ff4bca90f6632e738e80",26,"Female","Employee","Yes","1: max. 160 mg/day",3,2,1,1,1,2,1,2,1,3,1,1,4
+"5f2a5f187bf471245f7dc096",25,"Female","Employee","No","2: 160-320 mg/day",2,1,1,1,1,1,3,1,1,2,1,1,4
+"69f3ae625a83e320c93bf5fa",18,"Female","Student","No","2: 160-320 mg/day",3,1,1,3,1,2,1,2,2,2,1,2,4
+"6983a78799c06204fba33b90",21,"Male","Employee","No","2: 160-320 mg/day",1,1,1,1,1,1,2,2,1,1,1,1,4
+"69ef0b47dbf6ae6ab24fb35b",24,"Female","Employee","No","2: 160-320 mg/day",2,2,1,1,1,2,1,1,1,1,1,1,4
+"614e5092e08a3a2d3204ffd2",25,"Male","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"69f38af4f6594690f6895d32",27,"Female","Employee","No","1: max. 160 mg/day",2,2,3,2,2,2,2,3,2,2,2,1,4
+"6a02035c4f46e7ced2596f14",30,"Female","Employee","No","1: max. 160 mg/day",3,1,1,4,3,3,5,5,1,1,1,1,4
+"69f2661f0d0c76ffbd9f4f4a",20,"Male","Student","No","3: More than 320 mg/day",2,2,2,1,1,2,3,3,3,4,2,1,4
+"69419c81ee92288e4d87076d",30,"Female","Employee","Yes","0: No Caffeine (0 mg)",3,2,1,3,1,2,1,1,1,1,1,1,4
+"6a03b8e80e76aa896361e670",23,"Female","Student","Yes","1: max. 160 mg/day",3,2,1,3,1,2,1,1,1,1,1,1,4
+"633c74ad6178784ed5b52104",28,"Male","Employee","No","1: max. 160 mg/day",3,1,2,3,1,4,1,1,2,3,2,1,4
+"6a048d1eff8f6d9d9d674875",26,"Female","Employee","Yes","1: max. 160 mg/day",3,3,2,4,1,3,2,4,2,2,1,2,4
+"69d43c698943bc6aef0b2333",26,"Female","Employee","No","2: 160-320 mg/day",1,1,2,4,1,4,1,5,1,1,1,3,4
+"6a04adc749c06b545207da35",30,"Male","Employee","No","1: max. 160 mg/day",2,3,2,4,1,2,3,4,2,2,1,1,4
+"65ce6a583b6917f0374ea532",21,"Female","Student","No","0: No Caffeine (0 mg)",1,1,1,2,1,1,2,1,1,1,1,1,4
+"69e58d34513d36695333d685",28,"Female","Employee","No","3: More than 320 mg/day",4,3,3,5,2,2,5,4,2,4,3,3,4
+"69427c1ddf7dcadcbcef26fc",18,"Male","Student","No","2: 160-320 mg/day",1,3,3,1,1,2,1,2,1,2,1,1,4
+"69fe27753cb7135ddae0de4b",26,"Female","Employee","No","0: No Caffeine (0 mg)",2,1,1,2,1,1,1,3,1,1,1,2,4
+"6960870afc7c2283c5328a4b",27,"Male","Employee","Yes","2: 160-320 mg/day",4,5,2,3,4,4,5,5,4,5,5,5,4
+"69b5a5b41236e320db821798",26,"Female","Student","No","1: max. 160 mg/day",2,2,2,2,2,2,2,2,2,2,2,2,4
+"69f4c21dc56ee163c1de9711",19,"Male","Employee","Yes","1: max. 160 mg/day",4,1,3,2,1,1,1,1,1,1,1,1,1
+"6a03ec67cdf1ceccea3fded8",29,"Female","Employee","No","2: 160-320 mg/day",2,2,1,1,1,1,1,2,1,2,1,1,4
+"69ee05087123cadf4827590e",22,"Male","Employee","No","2: 160-320 mg/day",2,3,4,3,2,2,3,2,2,2,2,2,4
+"69f8e3a98862d61da18f97bd",27,"Female","Employee","No","1: max. 160 mg/day",1,1,1,1,1,2,4,3,2,1,1,1,4
+"6a045bbf5c6b1ce6f6c508d6",30,"Male","Employee","No","2: 160-320 mg/day",1,1,1,4,1,1,2,3,1,1,1,1,4
+"69fad3df8c1d0a97b8ec786a",22,"Male","Employee","No","2: 160-320 mg/day",2,3,2,5,1,3,2,4,1,2,1,1,4
+"6942e989152008bf93718f0e",30,"Female","Employee","Yes","1: max. 160 mg/day",4,5,3,2,4,3,5,4,3,3,2,2,4
+"69cff90deb7a3fd27ffd549c",25,"Male","Employee","Yes","1: max. 160 mg/day",5,3,1,3,1,2,2,4,1,4,1,3,4
+"69837c75817c25ff775c70c5",30,"Other/Prefer not to answer","Employee","Yes","2: 160-320 mg/day",2,1,4,4,1,4,5,5,5,1,1,3,4
+"6a03a18d2cadedfa49d56e15",26,"Male","Employee","No","2: 160-320 mg/day",2,1,1,2,1,1,3,1,1,2,1,1,4
+"6a035e3a9f3f8f04f6584135",27,"Female","Employee","No","2: 160-320 mg/day",1,1,1,1,2,1,2,2,1,1,1,1,4
+"6761ae77a5a1601b74e8fe60",19,"Female","Student","Yes","0: No Caffeine (0 mg)",5,5,3,4,2,5,1,4,2,2,2,3,4
+"694b928edc7747d82753b849",29,"Male","Employee","No","2: 160-320 mg/day",1,1,1,3,1,1,1,1,1,1,1,1,4
+"695fbf46a18461984feb824f",27,"Female","Employee","No","2: 160-320 mg/day",2,2,1,2,1,2,2,1,2,2,1,1,4
+"60919c8f1b024991374cfb2d",27,"Female","Entrepreneur","Yes","1: max. 160 mg/day",3,3,2,2,1,2,4,1,1,1,1,1,4
+"69ab8364e157c061ca63d825",24,"Male","Employee","No","1: max. 160 mg/day",3,3,4,3,4,3,4,3,4,3,4,3,4
+"69fe2f57239434c1019e38e4",25,"Male","Employee","No","1: max. 160 mg/day",2,2,1,3,1,1,2,1,2,2,1,1,4
+"693ae439c80150eee614b287",29,"Female","Employee","Yes","1: max. 160 mg/day",4,5,5,3,1,2,4,4,5,4,2,5,4
+"5f3786d029c845210770f0e2",27,"Male","Student","No","2: 160-320 mg/day",3,2,2,4,2,3,5,3,2,5,3,2,4
+"69b43d8d48ba55adc970bdc9",25,"Male","Employee","No","1: max. 160 mg/day",1,1,1,2,1,1,1,1,1,3,1,1,4
+"6a04b30954c4a218b0a07f3e",26,"Other/Prefer not to answer","Entrepreneur","No","2: 160-320 mg/day",1,1,1,3,1,1,1,4,3,4,1,1,4
+"6746a9ccaebffc616adf8386",29,"Female","Employee","No","3: More than 320 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"59f22a9fd6380600018b2929",30,"Female","Retired","No","1: max. 160 mg/day",1,1,1,1,1,1,2,2,1,1,1,1,4
+"69ea5c87ceb102b529455c8f",24,"Female","Employee","Yes","1: max. 160 mg/day",4,5,3,3,1,2,2,2,2,2,2,2,4
+"5efd580f4946481a427257d2",25,"Female","Employee","No","2: 160-320 mg/day",1,1,2,1,1,3,2,3,4,2,1,1,4
+"695f46eafc1e3b36389105be",23,"Female","Employee","No","0: No Caffeine (0 mg)",1,1,1,2,1,1,1,1,1,1,1,1,4
+"69f3d15aafbbce30d12a8069",30,"Female","Retired","Yes","1: max. 160 mg/day",3,3,3,3,4,3,2,2,3,3,2,2,4
+"69eb7da08068baf542a247a7",29,"Female","Employee","No","2: 160-320 mg/day",1,1,2,1,1,1,3,1,1,4,2,1,4
+"66dfca96a81711e53679ad4b",20,"Female","Entrepreneur","No","1: max. 160 mg/day",3,3,3,1,1,3,1,2,3,1,1,3,4
+"6685f1aad530199298298942",27,"Female","Employee","No","2: 160-320 mg/day",1,2,3,1,1,1,3,2,1,3,1,1,4
+"69f2c454f349683bc9b2a9ad",29,"Male","Employee","Yes","2: 160-320 mg/day",5,5,5,5,3,5,5,5,5,5,2,1,4
+"69baca6ddc9058770b244a9d",23,"Male","Employee","Yes","1: max. 160 mg/day",3,3,1,2,4,4,1,1,4,1,5,1,4
+"6983676623cfc747243e3047",28,"Female","Employee","No","2: 160-320 mg/day",2,3,1,1,2,1,1,4,2,2,1,1,4
+"69d7d67fd30867b10fb7e5b5",20,"Female","Employee","No","0: No Caffeine (0 mg)",1,1,1,1,1,1,1,4,1,2,1,1,4
+"6757418a14886dd3e93c2a69",25,"Female","Entrepreneur","Yes","0: No Caffeine (0 mg)",4,5,1,4,1,5,4,4,5,4,3,5,4
+"68b87f72a4cd11b3e742a547",25,"Female","Employee","No","2: 160-320 mg/day",2,2,2,2,1,2,3,2,2,2,2,1,4
+"69b329d3434d54946c4bd2e3",24,"Female","Student","No","1: max. 160 mg/day",4,4,3,4,2,3,5,2,1,1,1,1,4
+"6a01f7ec767e888032093c7e",24,"Male","Employee","No","1: max. 160 mg/day",3,1,1,2,1,1,2,1,2,3,1,1,4
+"654d0faada0f88ff931383c5",26,"Female","Entrepreneur","No","3: More than 320 mg/day",1,1,2,1,1,2,3,3,2,2,2,2,4
+"6116aa8875bdab57cab52804",29,"Female","Employee","No","2: 160-320 mg/day",1,1,2,1,1,1,3,2,1,1,1,1,4
+"698a4ce7b214b3c3681750d8",18,"Female","Student","No","2: 160-320 mg/day",1,1,1,2,1,1,2,3,1,1,1,1,4
+"69f6af392153631bf3f18c2c",29,"Male","Employee","Yes","1: max. 160 mg/day",4,5,1,2,1,4,3,1,4,4,1,1,4
+"6a03631935b4fd779bf1c19e",30,"Male","Employee","Yes","1: max. 160 mg/day",3,3,2,4,2,2,4,3,1,2,4,3,4
+"69fd1fc00c86b7bff2fbc7c2",23,"Female","Student","No","2: 160-320 mg/day",2,2,2,1,1,1,2,3,1,1,1,1,4
+"69f38c49109b7639a390ef10",19,"Female","Student","No","1: max. 160 mg/day",3,2,2,3,2,1,2,2,1,2,1,1,4
+"69c187c336c6c40ef47a37bb",28,"Female","Employee","No","1: max. 160 mg/day",1,1,1,4,1,1,2,3,1,1,1,1,4
+"69f526b654c54f2eec517fc3",21,"Female","Student","Yes","1: max. 160 mg/day",4,2,3,4,2,2,3,2,3,4,3,3,4
+"69b30647afc31d2915697186",24,"Female","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,1
+"6942e42421f5c29bae38a5b2",22,"Female","Employee","No","2: 160-320 mg/day",1,1,1,1,1,1,2,1,1,1,1,1,4
+"69e83573abc974c1c5bac48b",29,"Male","Employee","No","1: max. 160 mg/day",2,4,2,5,2,4,5,3,4,4,2,4,4
+"69dd345d66a03be48612ed57",27,"Female","Employee","No","1: max. 160 mg/day",5,5,5,4,1,2,2,2,1,3,1,1,4
+"69c189244fa077aedd2ad997",20,"Female","Student","No","2: 160-320 mg/day",2,1,1,4,1,1,2,2,1,1,1,1,4
+"698d20a041b53d5f1d94a807",30,"Male","Retired","No","1: max. 160 mg/day",1,3,2,5,1,3,5,2,1,1,1,2,4
+"6a02411d97c0d8e4be6fe8d3",21,"Male","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"698600befd4552759541c5b1",22,"Female","Employee","No","0: No Caffeine (0 mg)",3,2,1,5,1,2,1,1,1,2,1,1,4
+"69f5692701ee21aaba047055",26,"Male","Employee","No","2: 160-320 mg/day",2,3,1,5,2,3,4,3,4,2,2,2,4
+"69d4e9b098840254a2011f5e",18,"Male","Student","No","0: No Caffeine (0 mg)",1,1,1,1,1,1,2,1,1,1,1,1,4
+"5d268981c22768000166c7c7",24,"Female","Employee","No","1: max. 160 mg/day",1,2,3,5,1,2,4,3,3,1,1,1,4
+"6a01245257b6204a9ec8f81c",20,"Female","Student","No","1: max. 160 mg/day",1,1,1,2,1,1,2,3,1,1,1,2,4
+"69dff8d3a4c587d5f5278f52",22,"Male","Employee","Yes","1: max. 160 mg/day",2,3,2,3,3,3,2,2,3,3,4,3,4
+"697cef9f04cdac4f9309390f",30,"Female","Entrepreneur","No","1: max. 160 mg/day",2,3,3,3,2,4,1,1,2,2,1,2,4
+"66b2c5af02db82fc0cc8b4ee",29,"Male","Employee","No","2: 160-320 mg/day",2,3,2,2,2,1,2,2,1,3,2,1,4
+"6a04d0a98db59f818cf45d3f",22,"Male","Employee","No","1: max. 160 mg/day",4,4,4,5,1,3,1,3,3,5,2,1,4
+"6a02d0cf4c2ccce8809b0bc0",25,"Female","Employee","No","3: More than 320 mg/day",1,2,2,3,1,1,1,1,1,2,1,1,4
+"698a0bac4d17a0fc23b4d40a",25,"Male","Student","No","1: max. 160 mg/day",3,2,1,4,1,4,4,4,4,1,4,1,4
+"6a01785d3ed789398667f42b",27,"Male","Employee","Yes","1: max. 160 mg/day",2,1,1,4,1,3,4,2,5,3,1,1,4
+"69fa20e2723b0edd13bd08db",29,"Female","Employee","No","3: More than 320 mg/day",1,1,2,1,1,2,5,1,1,1,2,1,4
+"69f81069a453af43a3446f5c",20,"Male","Student","No","2: 160-320 mg/day",1,1,1,4,1,1,1,1,2,1,1,1,4
+"6a025da414acc2a419b5222f",27,"Female","Employee","Yes","1: max. 160 mg/day",3,2,2,4,1,3,2,2,1,1,2,1,4
+"610871d42f29bee3bd9f2c88",27,"Female","Employee","Yes","0: No Caffeine (0 mg)",3,4,2,3,2,3,3,4,2,2,2,2,4
+"69694b29099f9e920235a8ce",28,"Male","Employee","No","2: 160-320 mg/day",2,2,1,4,1,2,2,2,1,2,1,1,4
+"69ef51072bcb14e0b939bb28",27,"Female","Employee","No","3: More than 320 mg/day",1,1,1,1,1,1,2,1,1,1,1,1,4
+"6a0379e63429795c7b5c012b",22,"Female","Employee","Yes","1: max. 160 mg/day",2,2,2,3,1,1,3,3,1,1,1,2,4
+"69c8d669b8667c799b898e26",30,"Female","Employee","No","2: 160-320 mg/day",1,1,1,2,1,1,2,1,1,1,1,1,4
+"69fd06d60365b748866018fb",19,"Female","Student","No","2: 160-320 mg/day",1,1,1,1,1,1,1,1,2,2,1,1,4
+"69eba6547970de6c0666f78c",21,"Female","Student","No","1: max. 160 mg/day",3,1,2,5,1,1,1,2,1,1,1,1,4
+"69ea703910edb2d16f7dc283",25,"Male","Employee","Yes","1: max. 160 mg/day",2,1,1,4,1,3,4,1,1,3,4,1,4
+"69fca862ec0e265b90711dcc",30,"Other/Prefer not to answer","Employee","No","2: 160-320 mg/day",1,1,1,2,1,2,4,3,2,3,3,1,4
+"69ffef014ec71d283b1116da",28,"Male","Employee","Yes","2: 160-320 mg/day",3,2,2,5,1,3,4,5,3,3,2,3,4
+"69f1508956b46b1a6b5a1e14",29,"Male","Employee","Yes","1: max. 160 mg/day",4,4,5,5,1,4,3,3,4,3,3,1,4
+"69e39a67b0679850d73d5d7c",26,"Female","Employee","No","2: 160-320 mg/day",3,3,4,5,4,3,2,4,4,4,2,2,4
+"69c2c4c8ef72bbb6d0dd914d",25,"Female","Employee","No","2: 160-320 mg/day",1,1,1,2,1,1,2,2,1,1,1,1,4
+"69fe70065ddfb31cf1c0f4a8",28,"Female","Employee","No","2: 160-320 mg/day",1,1,1,1,2,1,2,2,1,1,1,1,4
+"667b1e59702c70222418c887",27,"Male","Employee","Yes","0: No Caffeine (0 mg)",4,4,2,5,3,3,2,3,2,4,2,2,4
+"69fe2136c437c57da83a9912",29,"Male","Employee","No","1: max. 160 mg/day",2,2,2,2,2,3,3,2,2,2,2,2,4
+"61008eb5a88b152b46baaae0",28,"Female","Employee","Yes","2: 160-320 mg/day",3,3,1,1,1,3,4,4,1,5,2,1,4
+"6a0104871454d437d6d2464e",28,"Male","Employee","No","2: 160-320 mg/day",1,1,1,2,1,1,2,1,1,1,1,1,4
+"69fdec37dc39d68e93891590",30,"Female","Employee","Yes","1: max. 160 mg/day",2,4,1,1,1,3,1,1,1,1,2,1,4
+"694c4917f64907c59ec1ddc5",24,"Male","Employee","No","1: max. 160 mg/day",2,2,2,1,1,1,1,2,1,1,1,1,4
+"6a02b963430c3aae17acafa0",20,"Male","Employee","Yes","1: max. 160 mg/day",3,3,2,3,1,2,2,2,1,2,1,1,4
+"69cad0c6b8187b659151f6c7",29,"Female","Employee","Yes","0: No Caffeine (0 mg)",4,4,2,5,1,4,2,2,2,1,1,2,4
+"627ebc31883c7dd7c2220c7e",22,"Female","Employee","No","2: 160-320 mg/day",1,1,1,1,1,2,2,2,1,1,1,1,4
+"69daaa88f4b226d06de18094",26,"Female","Student","Yes","0: No Caffeine (0 mg)",3,3,3,5,3,3,2,2,2,2,4,2,4
+"610c83598db46d4d46de2c61",27,"Female","Entrepreneur","No","0: No Caffeine (0 mg)",2,2,1,1,1,1,1,1,1,1,1,1,4
+"69f4fb4d4a7d5549ecb6870e",19,"Female","Student","Yes","1: max. 160 mg/day",3,1,4,4,1,1,1,1,1,2,1,1,4
+"6329e23d509947bfd4c50ab3",30,"Female","Employee","No","2: 160-320 mg/day",2,2,2,2,2,2,2,2,2,2,2,2,4
+"67ad10cb2581d35c87fadd2d",27,"Female","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"69c85c800ab5d9c42ac8f464",25,"Other/Prefer not to answer","Entrepreneur","Yes","1: max. 160 mg/day",3,2,4,3,2,3,2,5,1,3,1,2,4
+"6a03f46d20758dedffc1d79f",26,"Male","Student","No","2: 160-320 mg/day",1,1,1,1,1,1,3,1,1,2,1,1,4
+"6a00c8b959bcbeb14017665e",26,"Male","Employee","No","2: 160-320 mg/day",1,1,1,5,1,1,4,1,1,1,1,1,4
+"6982646c3c956bfb96e411be",23,"Female","Student","No","1: max. 160 mg/day",2,2,1,1,1,1,3,5,2,1,1,1,4
+"69ae6a93599fefb2a32662eb",20,"Male","Student","No","2: 160-320 mg/day",4,4,1,5,1,4,1,5,1,1,1,1,4
+"69e020e5674aaaae66df560e",21,"Female","Student","No","1: max. 160 mg/day",2,1,2,3,1,1,2,3,1,1,2,1,4
+"69a1bd9851ae70bbaf35cd23",22,"Female","Student","No","2: 160-320 mg/day",1,1,1,2,1,2,2,2,1,1,1,1,4
+"69ff7f387f1d6ddc4842a194",26,"Male","Entrepreneur","No","1: max. 160 mg/day",2,1,1,3,2,2,3,3,4,3,1,1,4
+"69fe2142049d94802d5f547b",23,"Female","Employee","No","3: More than 320 mg/day",2,1,1,4,1,1,4,5,1,1,1,1,4
+"6943625ad432ba0d72ea605d",21,"Female","Employee","No","2: 160-320 mg/day",1,1,1,4,1,2,4,1,1,1,1,1,4
+"69f647b1409dbc5de367677a",26,"Male","Employee","No","2: 160-320 mg/day",2,2,1,1,1,2,4,4,3,1,1,1,4
+"5ee7903e80706a01ea855d36",26,"Male","Employee","No","1: max. 160 mg/day",1,1,1,2,1,1,2,1,1,1,1,1,4
+"69e7a9e7e9c174b0c3eec55b",25,"Male","Entrepreneur","No","1: max. 160 mg/day",1,1,1,1,2,1,2,3,1,2,1,1,4
+"69bf48da5b5622553ffd1fd1",30,"Female","Employee","No","2: 160-320 mg/day",2,3,3,4,1,1,3,3,2,1,1,1,4
+"69fa15b402b038581a316151",22,"Male","Student","No","2: 160-320 mg/day",1,2,1,4,1,2,5,1,1,3,1,1,4
+"69f27f4b3999a0d4a5472bd3",23,"Male","Employee","Yes","1: max. 160 mg/day",3,4,1,5,1,3,2,1,2,1,1,1,4
+"64002c54ba91ee5ca1237edb",30,"Male","Employee","No","1: max. 160 mg/day",1,1,1,2,1,1,2,1,1,1,1,1,4
+"66abbaa7e79344e4b77a7834",27,"Female","Retired","No","2: 160-320 mg/day",3,2,2,3,1,1,1,1,1,1,1,1,4
+"6673c06ef972fa4885e8ec49",23,"Female","Employee","Yes","0: No Caffeine (0 mg)",4,5,3,4,1,3,2,4,4,3,1,1,4
+"69d0195558c1560ebed41d59",28,"Female","Retired","No","0: No Caffeine (0 mg)",3,3,2,4,1,1,1,2,1,1,2,3,4
+"699f5bb96748d570ed925027",18,"Female","Student","Yes","1: max. 160 mg/day",2,1,2,2,1,2,1,2,1,1,1,1,4
+"60fda57e0916dfe2157c9b00",26,"Female","Employee","No","2: 160-320 mg/day",2,1,1,1,1,2,3,2,1,1,1,1,4
+"6478e5fc76f5ecbc4f0ed353",30,"Male","Employee","Yes","0: No Caffeine (0 mg)",3,3,1,2,1,1,1,5,2,2,1,1,4
+"69e25045c1e106fefade5058",28,"Male","Employee","No","0: No Caffeine (0 mg)",2,1,2,4,1,2,1,2,2,3,1,1,4
+"6a04e564442a4dfc3c299699",24,"Female","Employee","No","1: max. 160 mg/day",2,2,2,3,2,3,3,2,1,1,1,1,4
+"6a02504cba24573a638a94e2",19,"Male","Student","No","0: No Caffeine (0 mg)",2,1,1,3,1,2,1,4,1,1,1,2,4
+"603d6ae665fbaacb5621ede2",29,"Male","Employee","Yes","1: max. 160 mg/day",3,2,3,1,2,2,1,2,1,2,2,1,4
+"695c0935faf5484f08a69738",30,"Female","Student","Yes","1: max. 160 mg/day",1,1,1,1,1,2,1,1,2,1,1,1,4
+"69f405a91381f9c4c9570b74",27,"Female","Employee","No","2: 160-320 mg/day",2,1,1,2,2,2,2,2,1,2,1,1,4
+"697cfc4636f9f711a54e48d1",30,"Male","Employee","Yes","1: max. 160 mg/day",2,4,3,1,2,2,4,3,3,3,2,1,4
+"6a011fe4bebd20e6b7e0d666",28,"Male","Employee","No","2: 160-320 mg/day",2,3,1,2,1,4,2,4,4,4,2,2,4
+"6a037dcbce1f0bfdebe2d15a",22,"Female","Employee","No","1: max. 160 mg/day",1,2,2,1,3,2,4,5,1,5,1,1,4
+"69adc3c66cfafb8cc41ecf3e",27,"Male","Employee","No","2: 160-320 mg/day",3,2,1,3,1,1,4,3,1,3,2,1,4
+"6942b804f85847483e3f405c",19,"Female","Student","No","1: max. 160 mg/day",3,3,5,5,1,5,5,5,5,5,5,5,4
+"69f97c65d0bbaa97a2a0eee9",30,"Male","Entrepreneur","No","2: 160-320 mg/day",5,5,5,5,5,3,3,4,4,4,4,3,4
+"6a00a09997cdf60bd4e178c6",21,"Male","Student","Yes","1: max. 160 mg/day",2,3,1,2,1,4,4,4,3,1,1,2,4
+"66bb5ad727c62d0960db333c",29,"Female","Employee","Yes","0: No Caffeine (0 mg)",1,3,1,2,2,3,2,4,1,1,1,1,4
+"65eaee94a1826098aae0eb95",29,"Male","Employee","No","3: More than 320 mg/day",2,2,2,3,1,2,3,3,3,2,1,1,4
+"63d546d88ccf3a038620bb8c",30,"Female","Employee","No","0: No Caffeine (0 mg)",1,2,1,1,1,1,2,1,1,1,1,1,4
+"63d13b3934b1255e0954a471",24,"Female","Employee","Yes","1: max. 160 mg/day",3,2,1,5,1,5,3,2,3,1,1,1,4
+"69b18919158bbb79b1aeaad3",25,"Female","Employee","No","1: max. 160 mg/day",1,2,1,1,1,1,1,1,1,1,1,1,4
+"62e073721cd1f5f6cff50910",28,"Female","Employee","No","1: max. 160 mg/day",2,1,1,3,1,1,3,1,1,1,1,1,4
+"69f8dbda9a2d9d3ce8e72269",30,"Female","Employee","No","2: 160-320 mg/day",3,3,3,3,1,1,2,2,1,1,1,1,4
+"69bf0b5052db7cd94e849fe7",26,"Female","Employee","No","1: max. 160 mg/day",5,5,5,5,1,4,1,4,4,4,1,4,4
+"69e2e531c6596993e2ebe56d",24,"Female","Retired","No","3: More than 320 mg/day",2,3,2,1,1,2,3,2,1,1,1,2,4
+"6365b5599c1775edb6d46be4",27,"Female","Employee","No","1: max. 160 mg/day",2,2,2,4,1,1,2,1,1,1,1,1,4
+"631c8e97db06f601f81bd82f",29,"Male","Employee","No","2: 160-320 mg/day",1,1,1,3,1,1,2,1,1,1,1,1,4
+"5d1c4b76ab2b52001a30eeb8",27,"Male","Employee","Yes","2: 160-320 mg/day",4,4,4,1,2,4,2,1,3,5,2,5,4
+"69bc5560230347e7c4ab9cda",35,"Male","Employee","No","1: max. 160 mg/day",1,1,1,5,5,2,5,3,1,1,3,2,4
+"69f0384546f087551b011457",21,"Male","Student","No","0: No Caffeine (0 mg)",4,3,2,4,4,3,2,2,3,3,1,1,4
+"5f13958f0576a62394421a92",28,"Male","Student","No","2: 160-320 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"699f14931a929010aea6d707",28,"Female","Employee","Yes","2: 160-320 mg/day",2,3,5,2,3,3,5,2,2,5,5,4,4
+"698e819429f8b9faad03c077",26,"Male","Entrepreneur","No","1: max. 160 mg/day",1,1,1,4,1,5,3,1,1,1,1,1,4
+"60fdab663ebe0cb7f3fd4d4d",29,"Female","Employee","No","1: max. 160 mg/day",3,2,2,3,1,4,2,2,1,1,1,2,4
+"5c6f00110b99a000018cc3c1",28,"Female","Employee","Yes","1: max. 160 mg/day",4,4,3,1,2,5,1,2,4,2,1,1,4
+"60fce0bedbae8b8996c93203",24,"Female","Retired","Yes","1: max. 160 mg/day",2,3,2,3,4,5,5,2,3,3,4,3,4
+"67e567d4265ecb014e6b298b",25,"Male","Employee","No","2: 160-320 mg/day",3,2,1,2,3,2,2,3,2,1,2,3,4
+"69a29f6ca18ddb6f2cf75d99",24,"Female","Employee","No","3: More than 320 mg/day",1,1,1,1,1,1,4,1,1,1,1,1,4
+"699ef3349b86f32f3810f4e5",24,"Female","Employee","Yes","0: No Caffeine (0 mg)",5,5,5,5,1,5,1,4,4,5,1,5,4
+"66f312ca7af69346a9a55f1b",20,"Female","Employee","No","2: 160-320 mg/day",2,2,2,2,1,2,2,2,2,2,2,1,4
+"69fe0d6c050d619cb73aa972",19,"Male","Student","Yes","1: max. 160 mg/day",3,1,1,1,1,1,1,1,3,1,1,1,4
+"69fe35954d0ef14f272aafcb",21,"Male","Student","No","2: 160-320 mg/day",2,2,1,4,1,4,2,4,2,1,2,1,4
+"69416f4716fda7b2fb54b6d9",30,"Male","Employee","No","3: More than 320 mg/day",2,2,1,1,1,1,1,2,2,2,1,1,4
+"66043087e6f547531945bb3f",30,"Female","Employee","No","2: 160-320 mg/day",2,2,1,1,1,1,3,1,1,1,1,1,4
+"69ffb35b7f98f0a49d52d742",25,"Female","Employee","No","1: max. 160 mg/day",1,1,1,2,1,1,1,1,1,1,1,1,4
+"69e9529aefc1fe17c5a7cc7e",29,"Female","Employee","No","3: More than 320 mg/day",1,1,1,2,2,1,3,2,2,1,2,1,4
+"69fb708c71d18cff1a0206aa",30,"Male","Student","No","1: max. 160 mg/day",1,2,2,2,1,1,1,2,1,1,1,1,4
+"66d740cbd30dd5477bbb789c",28,"Other/Prefer not to answer","Employee","No","1: max. 160 mg/day",3,2,2,4,3,2,4,2,3,4,2,1,4
+"678c358742b3a8d014ab9bbf",25,"Male","Student","Yes","1: max. 160 mg/day",4,4,4,3,2,4,3,4,3,4,1,3,4
+"699c5b2910acfa847b17b8f6",29,"Male","Employee","No","1: max. 160 mg/day",3,2,1,4,1,1,1,1,1,2,1,1,4
+"69f782d3f8303e1812a27073",29,"Male","Employee","No","2: 160-320 mg/day",2,2,2,2,1,2,2,1,2,2,1,1,4
+"6983ac5265ea18163cd9befe",22,"Female","Employee","Yes","0: No Caffeine (0 mg)",4,4,3,4,2,4,2,4,2,3,2,3,4
+"69ef8c89b87a7380754fc0fd",26,"Female","Employee","No","1: max. 160 mg/day",1,1,1,4,1,2,1,1,2,1,1,1,4
+"66e7644c71d2273046c7015d",30,"Male","Employee","No","1: max. 160 mg/day",2,4,3,2,3,4,2,2,4,3,2,2,4
+"69ad28b1a968477e0636efe9",19,"Male","Student","No","1: max. 160 mg/day",1,1,1,1,1,3,3,2,2,1,1,1,4
+"69f0d6ece0af9c37a6adc97c",24,"Female","Employee","Yes","2: 160-320 mg/day",3,4,3,4,3,3,4,4,3,3,4,3,4
+"66e8661e0c5e57cda7bf2d39",28,"Male","Employee","No","1: max. 160 mg/day",2,1,1,2,1,2,2,1,1,1,1,1,4
+"69dd60831fe37c2ff535082e",23,"Male","Student","Yes","1: max. 160 mg/day",3,2,1,2,3,1,5,5,3,3,2,3,4
+"69caebc5fc981fe3fbb4d92b",26,"Male","Employee","Yes","0: No Caffeine (0 mg)",4,4,3,5,2,4,1,3,2,3,3,3,4
+"69f15ba198284ae38759d5ac",24,"Female","Employee","No","2: 160-320 mg/day",3,3,1,3,1,2,5,1,2,4,1,1,4
+"69a49c607bc4b4963c8eec55",23,"Male","Student","No","2: 160-320 mg/day",2,1,1,3,1,2,3,2,2,2,1,1,4
+"65a4333efc75f965e7fc0cb5",20,"Male","Student","No","1: max. 160 mg/day",2,1,1,1,1,2,3,1,1,1,1,1,4
+"69d53aef81c05aeb395447a6",30,"Female","Employee","No","1: max. 160 mg/day",2,2,2,4,2,2,5,3,1,4,1,1,4
+"6747f2e7a7bbb1b5cdb7b365",26,"Male","Employee","No","1: max. 160 mg/day",3,2,2,3,2,3,2,2,2,1,3,2,4
+"610241c4efd0d67f0d483a61",29,"Male","Employee","No","0: No Caffeine (0 mg)",2,2,1,2,1,1,2,1,1,1,1,1,4
+"6315a6e79ee2ce17a350a08a",27,"Male","Employee","No","3: More than 320 mg/day",1,1,1,2,1,1,3,1,1,2,1,1,4
+"65f91231e10260ce66c137fe",26,"Female","Employee","No","1: max. 160 mg/day",2,2,1,4,1,1,1,1,1,2,1,1,4
+"56c984eb10a82f0006ffd111",30,"Female","Employee","No","2: 160-320 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"6785704c3b1ab8813a4958b0",30,"Female","Entrepreneur","No","2: 160-320 mg/day",2,2,2,4,1,1,3,1,1,1,1,1,4
+"69bca01f6969f9a4d73c7edc",25,"Other/Prefer not to answer","Student","No","2: 160-320 mg/day",1,2,2,1,1,1,3,3,1,2,1,1,4
+"699fcf6ce8e60730dbfc92ac",21,"Male","Employee","No","2: 160-320 mg/day",1,1,1,1,1,1,3,1,1,1,1,1,4
+"6a03b6bcbc5d069b27a62e67",20,"Female","Employee","Yes","1: max. 160 mg/day",2,4,1,3,3,5,5,3,1,3,1,3,4
+"6a01e613351bbf76a0a98333",28,"Male","Entrepreneur","No","1: max. 160 mg/day",1,1,1,4,1,4,4,1,1,1,1,1,4
+"697cf2f0ed95f5a2dcba188d",21,"Female","Employee","Yes","0: No Caffeine (0 mg)",4,5,1,4,2,2,3,2,2,2,1,1,4
+"5ccf2abd37095c001a78cef6",25,"Female","Employee","Yes","0: No Caffeine (0 mg)",1,1,1,4,1,2,3,2,1,1,1,2,4
+"6628078ec9f3353ac0da6f0b",25,"Male","Employee","No","2: 160-320 mg/day",4,4,4,2,2,3,3,2,1,4,1,1,4
+"612797126ed8f23cc0df9fbd",27,"Male","Student","No","2: 160-320 mg/day",2,2,1,3,1,3,3,2,1,2,1,2,4
+"69fd63a470d035553b30ac31",29,"Female","Employee","No","1: max. 160 mg/day",3,3,4,4,3,3,2,4,3,2,1,3,4
+"65d108195f912aa497e054c5",28,"Female","Employee","Yes","0: No Caffeine (0 mg)",2,3,2,4,1,1,2,3,2,2,2,2,4
+"67dbbdb452081ea930c8ab17",25,"Male","Employee","No","1: max. 160 mg/day",4,3,2,2,1,3,2,3,1,3,2,1,4
+"6a00a2e4a88496ca7335b00a",27,"Female","Entrepreneur","No","1: max. 160 mg/day",2,1,1,4,1,1,3,2,1,1,1,1,4
+"696458a6f97e7d0f2c0804b4",30,"Male","Employee","No","1: max. 160 mg/day",2,1,2,3,1,2,1,1,1,1,1,1,4
+"663a6c3e71964578f2601aaf",26,"Female","Employee","No","2: 160-320 mg/day",3,2,2,3,2,3,3,3,2,3,3,2,4
+"65f8c7701b92017a3902e203",29,"Female","Employee","No","2: 160-320 mg/day",1,1,1,3,1,1,2,2,1,1,1,1,4
+"699f92c1656d4e54e9481f75",28,"Male","Employee","No","1: max. 160 mg/day",3,1,1,4,1,3,3,2,3,2,1,1,4
+"666f2430498fab42b58073e4",30,"Female","Entrepreneur","Yes","0: No Caffeine (0 mg)",2,1,1,4,1,1,3,1,2,1,1,1,4
+"5aebb10baa05510001ff6500",27,"Male","Employee","No","2: 160-320 mg/day",3,2,1,4,1,2,1,1,1,2,1,1,4
+"69d3bda19e76aba232151e86",29,"Female","Employee","No","0: No Caffeine (0 mg)",1,2,1,1,1,1,3,2,1,3,1,1,4
+"693b6076dc8a344f5b3fcf4f",26,"Male","Student","No","2: 160-320 mg/day",1,1,1,1,1,1,4,2,1,1,1,1,4
+"5fa98fd42438bf189c4b3b65",29,"Female","Employee","Yes","1: max. 160 mg/day",4,5,5,2,1,4,4,4,4,3,1,1,4
+"607f6a7609a5a14e4ba43e30",30,"Female","Employee","No","1: max. 160 mg/day",3,2,3,1,1,3,1,1,3,1,1,1,4
+"69efcd4a08aa5765ea956f62",22,"Male","Entrepreneur","No","2: 160-320 mg/day",2,1,1,3,1,1,1,1,1,1,1,1,4
+"69bbe467df2b7f55aa24129a",25,"Female","Employee","No","1: max. 160 mg/day",1,2,1,1,1,2,2,2,1,1,1,1,4
+"69867790076223c8704bd4b2",28,"Female","Employee","Yes","2: 160-320 mg/day",3,4,2,3,1,1,3,3,4,2,2,1,4
+"69cb558303613efec2e5a772",20,"Female","Student","Yes","1: max. 160 mg/day",3,4,2,3,4,4,2,2,5,4,1,2,4
+"6994f790cd915d9d6fd3dae4",20,"Male","Student","No","0: No Caffeine (0 mg)",1,1,1,1,1,1,1,1,1,1,1,1,4
+"69fcdd3c03de429f5c1f675a",29,"Other/Prefer not to answer","Employee","Yes","0: No Caffeine (0 mg)",5,3,1,5,1,2,1,4,2,4,1,1,4
+"69fc816789592d3d23d7494f",26,"Female","Employee","Yes","0: No Caffeine (0 mg)",2,3,1,4,3,2,2,5,1,1,3,5,4
+"69a485460eccc24bfdc63c39",26,"Male","Employee","Yes","1: max. 160 mg/day",3,3,1,2,1,1,3,2,2,1,1,1,4
+"69f2257860154058ae8f5d3b",27,"Female","Employee","No","1: max. 160 mg/day",1,1,1,2,1,1,2,1,1,1,1,1,4
+"655fa6bf1cfd3bd5343e7778",28,"Female","Employee","Yes","1: max. 160 mg/day",3,3,2,4,2,2,5,3,2,2,2,3,4
+"631bf371cafbcf75cee93374",27,"Male","Employee","Yes","2: 160-320 mg/day",3,4,3,1,2,2,3,2,1,3,2,3,4
+"6978e12d547c025cf55182c0",28,"Female","Employee","No","2: 160-320 mg/day",1,1,1,2,1,1,2,1,1,1,1,1,4
+"69ee9c323799d8059c348c7c",27,"Male","Employee","No","0: No Caffeine (0 mg)",2,3,2,3,2,2,2,2,2,3,3,3,4
+"69a2184961d848728def38d5",26,"Female","Employee","Yes","1: max. 160 mg/day",5,4,5,5,5,5,1,1,5,5,5,5,1
+"611145d764f3f83ee48ae655",29,"Female","Employee","Yes","1: max. 160 mg/day",4,5,3,4,2,4,2,4,3,2,2,4,4
+"6a04e3a5931ef19b62d8582e",25,"Male","Employee","No","1: max. 160 mg/day",3,1,1,2,1,2,4,2,1,3,2,1,4
+"663a76878c91660487934528",23,"Female","Student","Yes","2: 160-320 mg/day",3,4,5,3,2,3,2,5,4,3,1,2,4
+"69dd8f1b1e5d53fb4ffe49b4",21,"Female","Student","No","1: max. 160 mg/day",2,2,2,2,3,3,3,2,2,1,1,1,4
+"664b80c549413e2125e87abb",24,"Other/Prefer not to answer","Employee","Yes","3: More than 320 mg/day",4,4,2,3,3,4,4,4,4,5,5,3,4
+"6731876be8c419cf04d952b7",26,"Male","Entrepreneur","No","1: max. 160 mg/day",1,1,1,4,1,1,2,2,1,1,1,1,4
+"69fcfc53589ed60c3ab08031",26,"Female","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"69e67f20876c8dcd0f10256d",20,"Female","Employee","No","1: max. 160 mg/day",1,1,1,2,1,1,3,1,1,1,1,1,4
+"5de83fac603b1b7971969b8c",30,"Male","Employee","No","2: 160-320 mg/day",2,1,2,1,1,1,3,1,1,1,2,1,4
+"69c11dd160e2044b6bccefd0",23,"Male","Employee","No","1: max. 160 mg/day",3,2,1,1,1,3,5,3,1,1,1,1,4
+"69f39df5fdef5b2e2a84011b",29,"Female","Employee","No","2: 160-320 mg/day",1,1,1,1,1,1,3,2,1,3,1,1,4
+"69f32d6335635a4689a27673",30,"Female","Employee","No","2: 160-320 mg/day",1,1,1,2,1,2,3,4,1,1,2,3,4
+"69fa4a78c6a08c01768d1585",20,"Female","Entrepreneur","No","3: More than 320 mg/day",3,3,2,3,1,3,2,2,4,2,2,1,4
+"69f0f01070d7fdf809923333",29,"Female","Student","No","1: max. 160 mg/day",3,2,1,4,1,4,5,1,1,1,2,1,4
+"61033627c32742424aeaaac1",24,"Female","Employee","No","0: No Caffeine (0 mg)",1,1,1,3,1,1,1,1,1,1,1,1,4
+"6a01da6beb0da70a25f5dbf5",30,"Male","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,4,1,1,2,1,1,4
+"69e015e3c001e5a71b4a55f6",19,"Female","Retired","No","1: max. 160 mg/day",4,4,2,4,4,4,5,5,3,3,2,1,4
+"6a0335a59ded0374b7b67571",22,"Male","Student","No","2: 160-320 mg/day",2,2,1,2,1,2,3,3,1,2,1,1,4
+"69e04010c86493ce99af78f2",29,"Female","Employee","Yes","1: max. 160 mg/day",2,1,1,3,2,4,1,4,3,2,1,3,4
+"6a027ea198f8815429f02b96",22,"Male","Employee","No","2: 160-320 mg/day",1,1,1,1,1,1,4,5,1,1,1,1,4
+"6054e5f7c1931593649b158f",23,"Male","Student","Yes","0: No Caffeine (0 mg)",2,2,2,4,2,2,3,2,3,2,3,3,4
+"69643bc4f2e18716cdf313cd",19,"Male","Student","No","1: max. 160 mg/day",1,1,1,2,1,1,3,1,1,1,1,1,4
+"69f2d55668307be1c5c7c349",19,"Male","Student","No","2: 160-320 mg/day",2,1,2,4,1,3,1,1,2,2,5,2,4
+"537cc438fdf99b2274df9aae",30,"Male","Employee","No","2: 160-320 mg/day",2,2,1,2,1,2,1,3,1,1,1,1,4
+"69e313a7d43cbac7915ab010",20,"Male","Employee","No","2: 160-320 mg/day",1,1,1,2,1,1,3,2,1,1,2,2,4
+"69f697cd7f5eac9fb43454a3",26,"Male","Employee","No","1: max. 160 mg/day",2,1,1,3,1,1,2,2,1,1,1,1,4
+"698754c1f51d3f9181f7952b",26,"Female","Employee","Yes","1: max. 160 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"673ef450579da5554b2bfe32",25,"Other/Prefer not to answer","Entrepreneur","No","2: 160-320 mg/day",2,2,2,1,1,1,3,2,2,2,1,1,4
+"69da63bdee5d22f41251b464",24,"Female","Employee","No","2: 160-320 mg/day",1,1,1,1,3,2,1,1,5,5,1,1,4
+"61259d15b416f3964d7193a5",23,"Female","Student","Yes","2: 160-320 mg/day",2,2,4,3,3,3,4,4,3,3,4,4,4
+"60fe5100235696796d15f27c",26,"Other/Prefer not to answer","Employee","Yes","1: max. 160 mg/day",3,2,1,3,1,3,4,4,2,3,2,3,4
+"698f006405e3e52fd712a2e9",18,"Female","Entrepreneur","No","2: 160-320 mg/day",2,1,4,4,5,1,5,5,5,1,1,2,4
+"695321cbc62a205921523e4f",25,"Male","Employee","No","1: max. 160 mg/day",3,3,1,1,1,2,2,1,1,1,2,1,4
+"6141563b3e1d6856256a5e40",24,"Male","Student","No","2: 160-320 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"6995ced488b4ebb1b13292af",27,"Male","Employee","No","2: 160-320 mg/day",1,1,1,3,1,1,2,1,1,1,1,1,4
+"6650e2ba4eceb07b4da4a7cd",28,"Female","Employee","No","0: No Caffeine (0 mg)",2,2,1,1,1,2,1,1,1,3,1,1,4
+"6a0244db7048e2d1e5d3aa33",20,"Male","Student","No","2: 160-320 mg/day",2,1,1,2,1,1,2,1,1,2,1,1,4
+"69ae79af72c0fd26189c680a",19,"Male","Student","No","1: max. 160 mg/day",2,4,1,3,1,3,2,1,3,3,1,2,4
+"69c3560b96b5560fe2ace9ce",22,"Male","Employee","No","2: 160-320 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,1
+"5febb30450a719c947d89794",25,"Male","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,1,1,1,2,1,1,4
+"69f8efeeb3152a5e550bf057",29,"Female","Retired","No","1: max. 160 mg/day",1,1,1,3,1,1,1,1,1,1,1,1,4
+"5e0815b567f170172799e072",29,"Male","Student","Yes","2: 160-320 mg/day",4,3,4,4,2,3,4,1,1,1,1,1,4
+"600309c2282af236dc94ee2c",25,"Male","Employee","No","1: max. 160 mg/day",2,2,1,4,1,2,1,1,1,2,1,1,4
+"69f140935dc089bf8e145ba8",19,"Female","Student","No","2: 160-320 mg/day",4,3,1,3,1,4,4,1,1,4,1,4,4
+"69fd3ce39ed5364316960890",23,"Female","Employee","No","1: max. 160 mg/day",2,1,2,4,3,3,3,3,4,3,1,1,4
+"699045803ca91ae571dd528c",29,"Male","Employee","Yes","0: No Caffeine (0 mg)",2,2,1,1,1,2,4,4,2,1,1,1,4
+"63d1e114550c261e5d78a941",30,"Female","Employee","No","0: No Caffeine (0 mg)",1,1,1,1,1,1,1,1,1,1,1,1,4
+"69fe9fae1faa7c7a7124a238",26,"Male","Student","No","3: More than 320 mg/day",3,2,4,5,3,3,5,4,4,4,4,5,4
+"69efa84191a926194883712a",25,"Female","Employee","Yes","0: No Caffeine (0 mg)",5,5,2,2,3,4,1,2,2,3,2,3,4
+"698e4ddd529df9d22ec38bbe",22,"Female","Employee","No","2: 160-320 mg/day",3,3,3,5,3,3,5,2,2,2,2,2,4
+"5fd7dc7806da330c9e393600",25,"Female","Retired","No","2: 160-320 mg/day",1,1,1,2,1,1,3,2,1,1,1,1,4
+"676dda2e34757c5868ccd91e",28,"Male","Employee","No","3: More than 320 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"69fe87643cf11e21dec0d458",25,"Female","Employee","Yes","2: 160-320 mg/day",5,5,5,5,3,3,5,1,4,5,3,1,4
+"69d5428662bcb91192d4a1d6",22,"Male","Employee","No","1: max. 160 mg/day",1,2,1,2,1,2,3,1,1,1,1,1,4
+"69fa983a4674492323cef399",27,"Female","Employee","No","1: max. 160 mg/day",3,5,4,1,3,2,4,5,2,1,3,4,4
+"60fdf313d3676e95353a7394",25,"Female","Student","Yes","1: max. 160 mg/day",5,4,2,3,1,4,1,2,5,3,1,2,4
+"6962feb09606dee4689453c5",23,"Female","Student","No","1: max. 160 mg/day",1,1,2,4,1,2,1,2,1,1,1,1,4
+"5ee5f7f771f86b333ba269de",29,"Male","Employee","No","2: 160-320 mg/day",2,2,1,3,3,2,1,1,1,2,2,1,4
+"69833f8be21993f8d6f2fdf3",21,"Male","Employee","No","1: max. 160 mg/day",2,1,1,1,1,1,3,3,1,2,1,2,4
+"6a04cd9f7bedb8149619434c",26,"Female","Employee","No","3: More than 320 mg/day",3,4,3,3,1,2,4,2,4,5,4,1,4
+"6a0102a61a9cddc2b509e682",27,"Male","Employee","No","1: max. 160 mg/day",1,1,2,1,1,1,1,1,1,1,1,1,4
+"69603ce622d0814296c77758",28,"Male","Employee","Yes","0: No Caffeine (0 mg)",5,5,4,5,1,2,1,3,4,3,1,2,4
+"69ea2ea703a6e1be358d88b0",22,"Female","Student","No","2: 160-320 mg/day",1,2,1,2,1,1,1,3,2,1,1,1,4
+"69e64f98f384a495d11b2ff0",30,"Female","Employee","No","2: 160-320 mg/day",1,1,1,2,2,1,3,3,1,1,1,1,4
+"69e0fc8efc58e5d3daefa2a0",26,"Male","Employee","Yes","1: max. 160 mg/day",1,1,1,4,1,1,1,2,1,1,1,1,4
+"6a026d8c0b2eb3ab905c3b51",27,"Male","Employee","No","3: More than 320 mg/day",1,1,1,1,1,2,3,3,2,2,1,1,4
+"69f0ef2a58d846e3bbe5a68f",25,"Female","Employee","Yes","3: More than 320 mg/day",3,4,4,5,4,3,4,3,4,5,4,3,4
+"69ae40f1b37b0e141294f003",23,"Male","Employee","No","2: 160-320 mg/day",4,4,1,5,1,3,4,1,1,1,1,2,4
+"69685f932a3a51d09794fd31",25,"Female","Student","No","2: 160-320 mg/day",1,2,1,1,1,1,1,3,2,1,1,1,4
+"69cb02de11a20eef15d03ec0",21,"Male","Student","No","0: No Caffeine (0 mg)",1,1,1,1,1,1,1,1,1,1,1,1,4
+"675a2864cf3d9d870639c42b",26,"Male","Employee","No","2: 160-320 mg/day",2,3,2,4,2,5,3,1,2,5,3,1,4
+"69d45f7d51c2d1e5c5b0af80",26,"Male","Employee","Yes","1: max. 160 mg/day",3,4,2,4,1,2,5,5,3,3,1,3,4
+"69e17b4489b488c473d5c608",27,"Female","Employee","No","1: max. 160 mg/day",4,2,3,5,2,1,5,1,3,3,1,1,4
+"69e7adbb9ea6da0b3c539e3d",28,"Female","Employee","Yes","1: max. 160 mg/day",4,4,1,5,1,3,2,5,3,4,1,1,4
+"69f3985608da44d433dc4966",29,"Female","Employee","Yes","1: max. 160 mg/day",3,3,3,4,1,1,2,4,2,4,3,2,4
+"69ef8d809259a4de239feef2",31,"Male","Employee","No","2: 160-320 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"6a04e1e867a2cd68edc6e802",26,"Male","Entrepreneur","No","1: max. 160 mg/day",1,1,1,2,1,1,3,2,1,1,1,1,4
+"695fb543da07d4f708615ce6",29,"Male","Employee","No","1: max. 160 mg/day",2,1,1,3,1,1,1,1,1,1,1,1,4
+"69fed3b14fd8a4716d2f4e32",26,"Female","Employee","No","0: No Caffeine (0 mg)",2,1,1,3,1,3,4,4,2,4,2,1,4
+"69fd72a1d5ffaefa8c4357d7",20,"Male","Student","No","1: max. 160 mg/day",4,4,3,3,5,3,3,3,4,4,2,1,4
+"5dd7d4d5d3ac2a92dfbb40d5",29,"Other/Prefer not to answer","Employee","Yes","0: No Caffeine (0 mg)",3,3,3,4,3,2,3,2,3,4,2,2,4
+"6966aef7933ed17148cf77d0",30,"Male","Employee","No","1: max. 160 mg/day",2,2,1,3,1,2,3,3,2,2,1,1,4
+"69c55a7b5b6813e6e66e39fc",29,"Male","Entrepreneur","No","2: 160-320 mg/day",2,1,1,1,1,1,2,2,1,2,1,1,4
+"69ffc6f620b31c75a8c503cc",29,"Male","Employee","No","2: 160-320 mg/day",1,1,1,3,1,2,2,1,3,3,1,1,4
+"69f5293997b4e753afcec1e3",26,"Male","Employee","No","2: 160-320 mg/day",1,2,1,4,1,2,3,1,1,1,2,1,4
+"69c13c0ad9ea03501703d527",24,"Female","Employee","Yes","1: max. 160 mg/day",2,2,1,2,2,2,3,4,2,2,3,1,4
+"61005e5ebf5d39c0332d7406",29,"Female","Employee","No","2: 160-320 mg/day",1,1,1,3,1,1,3,1,1,2,1,1,4
+"69ab54719141883544a6c1b6",25,"Female","Student","Yes","2: 160-320 mg/day",4,3,4,4,3,4,4,4,4,4,4,4,4
+"66db373cce38104268a0fb78",26,"Male","Employee","No","3: More than 320 mg/day",3,2,3,4,1,1,2,2,1,1,1,2,4
+"69b3450f244e9daf967f0e16",29,"Female","Employee","No","2: 160-320 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"5b67a13bcf223500012168e3",30,"Male","Employee","No","2: 160-320 mg/day",2,1,1,2,1,1,2,2,1,2,1,1,4
+"69fcd499fd111c8f70a1a41a",29,"Female","Employee","No","2: 160-320 mg/day",1,1,1,1,1,1,4,1,1,1,1,1,4
+"69601fb263ee0c8a6d15671f",20,"Male","Student","No","1: max. 160 mg/day",1,1,1,4,1,1,2,2,1,1,1,2,4
+"5b9b412a07c6960001614bf6",27,"Female","Employee","Yes","0: No Caffeine (0 mg)",1,2,3,1,1,1,2,1,1,1,1,2,4
+"69b8437aa1887a12d2451b66",30,"Female","Employee","No","2: 160-320 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,1
+"65577234800b1fea9ae3cf4d",28,"Male","Employee","No","2: 160-320 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"65cf8ac9f84f94ddc87e985f",23,"Female","Student","Yes","1: max. 160 mg/day",3,2,2,2,2,3,3,3,2,2,3,3,4
+"69c92c6be5cee2b6071ee0c0",29,"Male","Employee","Yes","1: max. 160 mg/day",3,3,1,4,1,4,1,1,1,1,1,1,4
+"698befe13322c6b9e901eecb",22,"Male","Student","No","1: max. 160 mg/day",2,3,3,2,4,2,3,2,2,3,4,3,4
+"6883a1dc2b9ac1af1ef98eeb",30,"Female","Employee","No","3: More than 320 mg/day",1,1,1,2,1,2,3,2,2,1,1,1,4
+"663e4e9297279aa9e54d2383",27,"Female","Employee","No","3: More than 320 mg/day",2,2,1,4,1,2,1,1,1,3,1,1,4
+"69a86bf51b4db35420dc23b2",23,"Other/Prefer not to answer","Student","Yes","1: max. 160 mg/day",5,5,5,3,2,5,5,3,2,5,3,3,4
+"69ff854b540728aeb82ded29",29,"Male","Employee","Yes","1: max. 160 mg/day",3,1,1,3,1,1,1,1,1,1,1,1,4
+"69f2eb32e589a2cf72a94223",27,"Female","Entrepreneur","No","1: max. 160 mg/day",3,2,2,2,1,2,1,2,3,3,1,1,4
+"5f07dba182caac000c48bc84",30,"Male","Employee","No","2: 160-320 mg/day",5,5,4,4,4,5,5,5,4,4,4,3,4
+"69fa3e7ee85eeef46a36c4a0",21,"Male","Student","No","2: 160-320 mg/day",1,1,1,1,1,1,2,1,1,1,1,1,4
+"6a036a17faaa08fc6c5f0f5a",29,"Female","Entrepreneur","No","3: More than 320 mg/day",1,2,4,1,1,1,1,1,1,1,1,2,4
+"672bbb444ab4546a33718004",29,"Male","Employee","No","2: 160-320 mg/day",1,1,1,3,1,1,1,1,1,1,1,1,4
+"69fd3c6f9a516e093fdb5422",29,"Male","Employee","No","2: 160-320 mg/day",1,1,1,2,3,1,4,2,1,1,1,1,4
+"69c5915a7ea736a741709ca4",29,"Male","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"631ad5df2dfd6aff965bba6a",29,"Male","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,2,2,1,1,1,1,4
+"69b0b6656577eab1cbffe728",25,"Female","Employee","No","0: No Caffeine (0 mg)",2,2,1,4,1,2,2,1,1,1,1,1,4
+"69a1846c72d172cbbe1ad72b",24,"Male","Student","No","1: max. 160 mg/day",1,1,1,4,3,1,2,1,1,2,1,1,4
+"5d3954872d32e2001a8690e2",26,"Female","Employee","No","2: 160-320 mg/day",2,2,1,3,2,1,4,3,2,2,2,2,4
+"69ee51cda47ad0ccc0bec225",21,"Male","Student","No","2: 160-320 mg/day",1,1,1,1,1,2,5,1,5,5,1,1,4
+"5a285307df86d80001455de5",29,"Male","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"6762196aaa3bf6f688761cb6",30,"Male","Entrepreneur","No","3: More than 320 mg/day",1,1,1,2,1,1,1,1,2,2,1,1,4
+"69f35b5f7031c1293acf56fd",23,"Female","Employee","No","1: max. 160 mg/day",3,3,2,1,2,1,3,4,1,1,1,1,4
+"69bc0df153a4f6e5696bd267",27,"Female","Employee","No","1: max. 160 mg/day",1,2,1,2,2,1,3,1,1,1,1,1,4
+"6929d6581f54fd39c4c59891",21,"Female","Employee","No","1: max. 160 mg/day",2,2,1,3,1,2,1,2,1,1,1,1,4
+"69fe00eb7febe08d4470150f",19,"Male","Student","No","1: max. 160 mg/day",3,4,3,5,3,2,3,3,2,5,1,2,4
+"69e52dd38c287c3028ac2f99",24,"Female","Entrepreneur","No","1: max. 160 mg/day",2,2,3,1,1,1,2,1,1,1,1,1,4
+"69fe12576ecbdd25944225cd",29,"Male","Employee","No","2: 160-320 mg/day",1,1,1,3,1,2,3,3,1,1,1,1,4
+"6a04dbc04ab4c4439e3a3851",21,"Female","Employee","Yes","1: max. 160 mg/day",3,3,1,1,1,5,1,2,4,4,1,4,4
+"610888630b0ebdd3a7211e73",27,"Female","Student","No","1: max. 160 mg/day",2,1,1,2,1,1,2,1,1,1,1,1,4
+"63f7a84b6e32b3b093b7b241",30,"Male","Employee","No","1: max. 160 mg/day",1,1,1,2,1,1,1,1,1,3,1,1,4
+"69f4affecb304665fbe57e0c",29,"Female","Employee","No","1: max. 160 mg/day",1,2,1,2,1,1,1,3,1,1,1,1,4
+"6112ef699d617464990fd01d",24,"Female","Employee","No","1: max. 160 mg/day",2,2,2,1,2,1,2,3,2,2,3,1,4
+"6638e8aa3d1f38846080806a",27,"Male","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"6a004606b02d1d83b28b8861",21,"Female","Employee","Yes","2: 160-320 mg/day",1,1,1,4,2,1,4,1,1,2,2,2,4
+"66e5bcf611d0bc991efda653",20,"Male","Student","No","1: max. 160 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"69f913d7d7e394239ee5c47a",26,"Female","Employee","No","2: 160-320 mg/day",1,1,1,1,2,1,2,1,1,1,2,1,4
+"69cfbd8dab1da24ad36f3b63",26,"Female","Student","No","1: max. 160 mg/day",1,1,1,5,1,2,1,1,1,2,1,1,4
+"69fded1b5d37ff18df17d676",27,"Male","Employee","No","2: 160-320 mg/day",4,2,1,5,2,4,4,1,2,3,5,4,4
+"69f132c7c750d3abc3c7bf4a",30,"Male","Employee","Yes","1: max. 160 mg/day",2,1,1,3,3,2,3,1,2,3,2,1,4
+"61180291fb0d654ea9335196",30,"Male","Employee","No","2: 160-320 mg/day",1,1,1,2,1,1,2,2,1,2,1,1,4
+"6983549b2eeaffbc45367e23",28,"Male","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,1,1,1,2,1,1,4
+"6a04e7ec2e37c64c944ac1d4",29,"Male","Employee","No","2: 160-320 mg/day",3,3,1,1,2,1,2,1,1,3,1,1,4
+"6a04dba83b5fd0b8b861e00d",29,"Female","Employee","Yes","1: max. 160 mg/day",2,1,2,3,2,3,4,5,1,2,2,3,4
+"6994eed11257a6ab3dd874d4",22,"Female","Student","No","3: More than 320 mg/day",2,2,2,1,1,1,1,1,1,2,2,1,4
+"68b8ae106d16b2237acd5eb4",28,"Female","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,2,1,1,1,1,1,4
+"6665b652ecac3856fcb26a6a",26,"Male","Employee","No","3: More than 320 mg/day",1,1,1,1,1,1,1,3,1,1,1,1,4
+"6723f9243b378038ee3fbc01",25,"Male","Employee","No","1: max. 160 mg/day",1,2,1,1,1,1,1,2,1,1,1,1,4
+"6983add46f731ea32fd093a7",24,"Female","Entrepreneur","Yes","1: max. 160 mg/day",3,2,1,3,1,3,2,2,1,3,2,1,4
+"66953383fd8705b2cc307420",22,"Male","Employee","No","1: max. 160 mg/day",2,2,1,3,1,1,3,1,1,1,1,1,4
+"69c5557385649f69dfefeb92",29,"Female","Employee","No","2: 160-320 mg/day",1,1,1,1,1,1,2,1,1,1,1,1,4
+"69b47f26089ce0654b444154",19,"Male","Student","No","1: max. 160 mg/day",3,3,2,3,2,3,2,1,2,2,1,3,4
+"69ab2b85eb4738c7033037f5",26,"Female","Employee","No","1: max. 160 mg/day",2,2,2,2,1,3,4,4,3,2,2,1,4
+"697df9aa934d8b9de8f2afe9",29,"Male","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,3,1,1,1,1,1,4
+"69cc639567411bf04878ca20",22,"Female","Employee","Yes","1: max. 160 mg/day",3,3,3,3,3,3,3,3,3,3,3,3,3
+"69ab9f5664a6fa203675624e",26,"Male","Entrepreneur","No","2: 160-320 mg/day",1,1,1,1,1,2,3,2,1,1,1,1,4
+"6400d8e645e80091a53f9b21",27,"Male","Employee","No","2: 160-320 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"69a5730472db6568bd215e6c",26,"Male","Employee","No","2: 160-320 mg/day",2,2,1,3,2,1,1,1,1,4,2,1,4
+"698383f571211f272ff1c000",20,"Male","Student","No","1: max. 160 mg/day",3,2,1,2,1,2,2,2,1,1,1,1,4
+"6a04e57020abd00134bf3655",24,"Female","Student","No","1: max. 160 mg/day",3,3,1,1,1,2,3,1,1,2,1,2,4
+"69eab54b2153c3c436892b1e",23,"Male","Employee","Yes","3: More than 320 mg/day",2,3,3,2,2,3,3,2,2,3,2,2,4
+"63d40c3695dd423166c7c83d",23,"Male","Entrepreneur","No","1: max. 160 mg/day",2,1,2,1,1,1,1,1,1,1,1,1,4
+"6942b061070a2e870db24393",27,"Male","Employee","No","3: More than 320 mg/day",1,1,1,2,2,1,1,1,2,3,1,1,4
+"69c59b8a6b1f26fc40d5eefd",30,"Female","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,4,3,1,4,2,2,4
+"5e7e9e07d29f755802057a29",28,"Male","Employee","No","1: max. 160 mg/day",4,2,1,4,1,2,4,1,1,2,3,1,4
+"69a8e603a6ee59938f40ac7a",25,"Female","Employee","No","1: max. 160 mg/day",2,2,3,2,2,3,4,4,4,2,1,1,4
+"668b28baed14cafbc306511d",21,"Female","Student","Yes","0: No Caffeine (0 mg)",4,5,2,2,2,5,4,5,3,4,4,4,4
+"69feb23df1ca4636cba4fe8c",25,"Female","Entrepreneur","No","2: 160-320 mg/day",2,3,1,2,1,1,2,2,2,2,1,1,4
+"69bfb3ff0d32cadf7ae5fbf6",28,"Female","Employee","No","2: 160-320 mg/day",1,2,1,1,1,1,2,1,1,2,1,1,4
+"5d4e01004ea5e60001ecc60b",28,"Male","Employee","No","3: More than 320 mg/day",2,3,3,4,2,3,2,3,1,3,3,2,4
+"6a049d26f6c5e2e132221df0",27,"Female","Employee","No","2: 160-320 mg/day",2,2,1,1,1,2,3,3,1,1,1,1,4
+"69fe0f2c7df2c1531416b00e",26,"Female","Employee","Yes","1: max. 160 mg/day",3,3,2,4,2,2,3,3,5,1,2,1,4
+"69f1bb261e428b9ff000372d",28,"Male","Employee","No","2: 160-320 mg/day",1,1,1,1,2,2,1,2,2,1,2,1,4
+"60b5de64071568319511deff",26,"Female","Employee","No","1: max. 160 mg/day",1,1,1,3,1,2,2,1,1,1,1,1,4
+"69a1dae097d3f391210944e7",28,"Female","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,2,3,1,1,1,1,4
+"69d57c037daf021c438c982b",24,"Male","Employee","No","1: max. 160 mg/day",1,2,1,4,1,1,2,2,1,1,1,1,4
+"63d209778cf36665be2d42ec",28,"Male","Student","No","1: max. 160 mg/day",3,3,2,3,2,2,4,1,1,1,4,2,4
+"69d5462a8540e01c11986136",30,"Male","Employee","No","2: 160-320 mg/day",2,3,1,4,1,2,4,3,2,5,1,2,4
+"69a09fcc64b6bde721fd5bcd",21,"Other/Prefer not to answer","Entrepreneur","No","1: max. 160 mg/day",2,1,1,1,1,1,1,1,1,1,1,1,4
+"6a04cf3b02d570e278443cab",25,"Female","Employee","No","2: 160-320 mg/day",1,1,1,3,1,3,3,1,2,3,1,1,4
+"67bde62a1eda0ad407b026ca",25,"Male","Employee","No","1: max. 160 mg/day",1,1,2,1,1,1,3,1,1,1,1,1,4
+"69e83c356fdb8c7810aa94b0",25,"Male","Employee","Yes","1: max. 160 mg/day",3,2,1,5,4,1,4,1,1,1,1,1,4
+"69f4ef0de52fb52b45355c14",21,"Male","Student","Yes","2: 160-320 mg/day",2,1,1,3,2,4,3,1,2,2,2,1,4
+"69ffbce90c444ebafe471a34",27,"Male","Employee","Yes","2: 160-320 mg/day",2,2,2,1,1,2,2,4,1,1,2,1,5
+"69fd4bcdc749a26768dd1493",29,"Female","Employee","No","1: max. 160 mg/day",1,1,1,4,2,2,3,1,1,1,1,1,4
+"699902e61ce7d5b9af913e36",29,"Male","Employee","No","2: 160-320 mg/day",3,2,2,4,2,2,4,1,1,2,1,1,4
+"69a5e6f586d61f0e699b64b5",24,"Female","Employee","No","1: max. 160 mg/day",1,2,1,3,1,1,2,1,1,1,1,1,4
+"69e2ecc23485c4104095946c",26,"Female","Entrepreneur","Yes","1: max. 160 mg/day",2,2,3,2,1,2,2,2,2,1,2,2,4
+"69cfb45d653ca2bb903544bf",29,"Male","Employee","No","1: max. 160 mg/day",2,2,1,3,1,1,3,2,2,2,1,2,4
+"6a0376ccfcd73b03eb6c784b",24,"Female","Student","No","2: 160-320 mg/day",2,2,2,2,1,3,2,3,1,1,1,1,4
+"65602c23bb03869d53e76a34",30,"Female","Employee","Yes","1: max. 160 mg/day",2,2,1,3,1,2,3,2,1,1,1,1,4
+"69ffbd0ce469054d08c462b0",23,"Male","Entrepreneur","Yes","2: 160-320 mg/day",4,2,3,2,2,3,3,2,2,3,2,3,4
+"699be333e237c436afe03b9f",29,"Male","Student","No","1: max. 160 mg/day",2,2,1,2,1,1,2,3,1,1,1,2,4
+"6650d8cf7d2e3757a26ed962",26,"Male","Employee","No","1: max. 160 mg/day",2,1,1,3,1,1,3,2,2,2,1,1,4
+"69c5d4fd48cd707ebef21f52",26,"Female","Employee","No","2: 160-320 mg/day",1,1,1,2,1,2,4,1,2,2,1,1,4
+"69f91ea47b9f588c54db6507",24,"Female","Employee","No","1: max. 160 mg/day",3,3,3,1,4,4,1,1,5,4,2,1,4
+"6a02be9fe54556bdb6a62e85",28,"Male","Employee","No","1: max. 160 mg/day",1,2,1,1,1,2,3,1,1,1,1,1,4
+"69e0fb43939c2ad81bc1063c",28,"Male","Employee","Yes","1: max. 160 mg/day",2,3,3,2,1,2,4,5,3,2,1,1,4
+"66362c599c58570d437989ca",25,"Male","Entrepreneur","Yes","0: No Caffeine (0 mg)",2,3,1,1,3,1,1,2,5,4,5,1,4
+"69d6feb80deb2f7868b3748c",20,"Female","Student","No","1: max. 160 mg/day",1,2,1,3,1,2,3,2,1,2,1,1,4
+"69c01ad32e8258f62bd58aeb",23,"Female","Entrepreneur","Yes","1: max. 160 mg/day",2,3,3,3,4,3,3,4,3,3,4,4,4
+"69fe57468b52fe5dd81773d0",23,"Female","Employee","No","1: max. 160 mg/day",1,1,1,2,1,1,3,1,1,1,1,1,4
+"69f7cc0782c83f26163ad2ba",30,"Male","Employee","No","2: 160-320 mg/day",4,4,1,1,1,1,3,1,1,1,2,2,4
+"69f138c123afaf5a14684c29",25,"Male","Employee","No","1: max. 160 mg/day",1,1,1,1,1,1,1,1,1,1,1,1,4
+"6a0393aa489c913f6fc0f745",21,"Male","Entrepreneur","No","1: max. 160 mg/day",1,1,3,4,1,2,4,1,2,3,1,1,4
+"69e81749c5b5f9c50b132749",28,"Male","Entrepreneur","No","3: More than 320 mg/day",1,2,1,4,1,1,4,1,1,5,1,1,4
+"69c3058a99ca09b99919c1f9",24,"Male","Employee","No","3: More than 320 mg/day",1,1,1,1,1,1,1,1,1,2,1,1,4
+"69b4bd40f97c2856be0eada4",24,"Male","Employee","No","1: max. 160 mg/day",4,1,1,4,3,3,3,1,1,1,1,1,4
+"6985fb57a04225e1f4afa474",27,"Male","Employee","No","1: max. 160 mg/day",2,4,1,2,1,1,4,1,1,1,1,1,4
+"6a04cdc3c66f79399c8bee79",20,"Male","Employee","Yes","0: No Caffeine (0 mg)",4,2,2,3,5,4,3,4,1,2,4,1,4
+"69adeec7223c3d8e763750fb",26,"Male","Employee","Yes","0: No Caffeine (0 mg)",4,5,4,5,2,3,4,4,5,5,4,5,4
+"69f8cf81327baf1f0fa1204f",27,"Female","Employee","No","3: More than 320 mg/day",2,1,1,4,1,2,5,1,1,1,1,2,4
+"698aabef670f1b03302ef7ac",22,"Male","Employee","No","1: max. 160 mg/day",1,1,1,2,1,1,1,1,1,1,1,1,4
+"69c595862a585f09cc99aa88",29,"Female","Employee","Yes","2: 160-320 mg/day",4,4,3,5,3,4,5,2,3,4,4,3,4
+"69b59c658c31fd1239c1a565",22,"Female","Entrepreneur","No","2: 160-320 mg/day",2,1,1,3,1,2,1,1,1,3,1,1,4
+"69fed04a4ec7346243a16e8f",22,"Male","Student","No","1: max. 160 mg/day",1,1,1,3,1,1,1,1,1,1,1,1,4
+"5b393581c49ecb00010a6693",25,"Female","Entrepreneur","No","1: max. 160 mg/day",2,1,1,2,1,1,1,1,1,1,1,1,4
+"69febf4039ac6bf71336a650",30,"Male","Employee","No","1: max. 160 mg/day",4,3,3,3,4,4,2,2,2,3,3,3,4
+"69c98fe325df03e79fbfb934",29,"Female","Employee","Yes","1: max. 160 mg/day",2,3,2,1,1,3,2,2,3,1,1,2,4
+"696a9773a84c5f9d4a930874",29,"Male","Student","Yes","0: No Caffeine (0 mg)",4,3,3,3,3,3,4,3,3,3,4,3,4
+"69ee2c0e9772a221d8e8b945",27,"Female","Employee","Yes","1: max. 160 mg/day",3,4,1,1,1,3,2,4,1,1,1,1,4
+"697a9031ac1e56472bced7af",29,"Male","Student","Yes","1: max. 160 mg/day",4,5,4,4,1,5,4,5,5,1,1,1,4
+"660c0f5e2194f64ac63b0930",28,"Male","Employee","No","1: max. 160 mg/day",1,2,1,1,1,2,2,2,1,1,1,1,4
+"69f4f8217c50d93cac6890d5",25,"Female","Entrepreneur","Yes","2: 160-320 mg/day",4,3,4,3,4,3,4,3,4,3,4,3,4
+"6a0205ed993521707c6cc96c",25,"Male","Student","Yes","0: No Caffeine (0 mg)",5,3,2,3,3,4,4,1,4,4,1,1,4
+"6986b5a2570c71397541d834",19,"Female","Employee","Yes","0: No Caffeine (0 mg)",4,4,4,4,1,5,1,1,4,4,1,1,4
+"69eecca824cc6f33743ec920",28,"Male","Entrepreneur","No","1: max. 160 mg/day",1,1,1,3,2,1,3,2,1,1,2,1,4
+"5e8a1827052175000938eb91",27,"Male","Retired","No","2: 160-320 mg/day",2,2,2,2,1,1,3,1,1,3,1,1,4
+"6287a504c4cb277cf781b6bb",23,"Male","Student","No","1: max. 160 mg/day",2,2,1,2,1,1,1,1,1,2,1,1,4
+"6a016d08a814f10112ed70e7",30,"Female","Employee","Yes","1: max. 160 mg/day",4,4,3,3,3,2,4,3,2,3,2,2,4
+"69dd36fbc6c6cac7c29f857f",21,"Male","Student","Yes","1: max. 160 mg/day",4,3,4,2,3,2,3,2,3,3,2,3,4
+"69f67875f03843c3462362df",27,"Male","Employee","Yes","1: max. 160 mg/day",2,3,2,3,4,5,5,1,5,4,4,5,4
+"69d9a7bcc58d74ae971fbc89",24,"Female","Employee","Yes","1: max. 160 mg/day",2,2,2,4,1,1,5,4,2,2,2,1,4
+"69def8d5a4ae898dc1c548ae",27,"Other/Prefer not to answer","Student","No","2: 160-320 mg/day",2,2,2,3,2,2,2,2,1,5,1,1,4
+"69f765422c7e338d9eb1df8c",26,"Male","Employee","No","1: max. 160 mg/day",1,1,1,3,1,1,2,1,3,1,1,1,4
+"66826e9e2c8e4bfd530e5584",24,"Male","Student","No","0: No Caffeine (0 mg)",2,4,3,5,2,2,1,2,1,1,4,1,4
+"67311e28e02cbcf245c5a979",23,"Male","Student","Yes","1: max. 160 mg/day",4,4,2,5,1,2,2,1,4,4,2,1,4
+"695fb6faa18461984feb817f",27,"Female","Employee","No","1: max. 160 mg/day",2,2,1,3,1,2,3,4,1,1,2,2,4
+"66a641fad795279aac9120b8",30,"Male","Employee","Yes","1: max. 160 mg/day",4,4,4,5,2,2,5,2,1,2,1,1,4
+"69f65d0d31200888cc535b8f",20,"Male","Student","No","0: No Caffeine (0 mg)",2,1,1,2,1,1,1,1,1,1,1,1,4
+"5c693a2b58b97400013b3637",26,"Female","Employee","No","3: More than 320 mg/day",1,1,1,3,1,2,4,2,2,2,1,2,4
+"69cd93589bbbb6b7ed9f156c",20,"Other/Prefer not to answer","Student","No","1: max. 160 mg/day",2,4,1,2,1,1,1,1,2,2,1,1,4
+"66a595c0e6016ac7f76883d1",27,"Male","Employee","Yes","2: 160-320 mg/day",2,1,1,2,1,2,3,3,1,1,1,2,4
+"69fb8d85c239a57e0df4e1d3",26,"Male","Employee","No","1: max. 160 mg/day",3,2,4,3,3,4,2,4,3,2,3,2,4
+"69fcefee093e8c08bab63f18",27,"Male","Entrepreneur","No","1: max. 160 mg/day",2,2,1,4,2,4,3,2,1,1,1,1,4
+"6990f03349def79734ef0bd2",24,"Female","Student","No","2: 160-320 mg/day",1,1,1,3,1,2,4,1,1,1,1,1,4
+"69f68942426b7232075be2ab",24,"Female","Employee","No","1: max. 160 mg/day",1,1,2,2,2,2,3,2,2,3,3,3,4
+"69c9ddbcfd963804ea4f4936",23,"Female","Employee","No","2: 160-320 mg/day",3,3,2,4,1,2,3,3,2,2,2,2,4
+"697cadfbf32492606a805de2",21,"Female","Entrepreneur","No","2: 160-320 mg/day",2,3,3,2,3,4,1,1,1,2,1,1,4
+"69ab01ac99be7bb907f0c002",22,"Female","Student","No","1: max. 160 mg/day",1,1,1,1,1,2,1,1,1,2,1,1,4
+"5aedb8ce49bb4c0001079640",30,"Female","Employee","Yes","1: max. 160 mg/day",2,2,1,3,1,2,1,1,1,1,1,1,4
+"695fc2e6c420c40f5394e627",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"6236fe0ee063333a3e1ba72a",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"6735456e8034ea7e61eac785",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"69fd63a470d035553b30ac31",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"69eae58bdece7b2466e41c7d",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"69fded1b5d37ff18df17d676",27,"Male","Employee",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
