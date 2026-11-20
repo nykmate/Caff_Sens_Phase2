@@ -1,0 +1,327 @@
+---
+title: "Caff Sens - Data cleaning and Descriptive statistics"
+author: "Nyiro Kovacs Mate"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(readr)
+library(dplyr)
+library(stringr)
+library(readxl)
+library(lmtest)
+library(car)
+library(lm.beta)
+library(lavaan)
+library(semTools)
+library(psych)
+library(GPArotation)
+library(BifactorIndicesCalculator)
+library(MVN)
+library(polycor)
+library(rsample)
+```
+
+```{r}
+library(tidyverse)
+library(skimr)
+library(janitor)
+library(googlesheets4)
+```
+
+# Read raw data
+```{r}
+cs_raw <- read_csv(“data/true/caffeine_sensitivity.csv”)
+
+
+intolerances <- c(
+  “hisztaminintolerancia” = “histamine_int”,
+  “gluténintolerancia” = “gluten_int”,
+  “laktózintolerancia” = “lactose_int”,
+  “tartósítószerekre adott intolerancia” = “preservatives_int”,
+  “mesterséges színezékekre adott intolerancia” = “artificialcolors_int”,
+  “ízfokozókra adott intolerancia” = “flavorenhancers_int”,
+  “csokoládéintolerancia” = “chocolate_int”,
+  “mesterséges édesítőszerekre adott intolerancia” = “artificialsweeteners_int”,
+  “alkoholintolerancia” = “alcohol_int”,
+  “gyógyszerintolerancia (bármilyen)” = “drugs_int”)
+```
+
+# Clean data
+```{r}
+cs_clean <-
+  cs_raw |>
+  clean_names() |>
+  select(-c(ip_address, status, recipient_last_name:consent_form)) |>
+
+  mutate(caff_sens = case_when( str_detect(caff_sens, “Igen”) ~ 1,
+                                str_detect(caff_sens, “Nem”) ~ 0,
+                                TRUE ~ NA_real_),
+         across(c(starts_with(“caff_intox”),
+                  starts_with(“cerq”),
+                  starts_with(“sss”),
+                  starts_with(“pms”),
+                  starts_with(“maia”),
+                  starts_with(“hexaco”),
+                  starts_with(“asps”),
+                  starts_with(“psrs”),
+                  starts_with(“berq”),
+                  children,
+                  ),
+                 parse_number),
+         honesty_report = case_when(honesty_report == “Igen” ~ “Yes”,
+                                    honesty_report == “Nem”  ~ “No”,
+                                    TRUE ~ NA_character_),
+         gender = case_when(str_detect(gender, “Nő”) ~ “Female”,
+                            str_detect(gender, “Férfi”) ~ “Male”,
+                            str_detect(gender, “Egyéb”) ~ “Other/Undisclosed”,
+                            TRUE ~ NA_character_),
+         occupation = case_when(str_detect(occupation, “Tanuló”) ~ “Student”,
+                                str_detect(occupation, “Alkalmazott”) ~ “Employee”,
+                                str_detect(occupation, “Vállalkozó”) ~ “Entrepreneur”,
+                                TRUE ~ NA_character_),
+         uni_work = case_when(str_detect(uni_work, “0”) ~ “No”,
+                              str_detect(uni_work, “1”) ~ “Yes”,
+                              TRUE ~ NA_character_),
+         smoking_status = case_when(str_detect(smoking_status, “0”) ~ “No”,
+                                    str_detect(smoking_status, “alkalmanként”) ~ “Occasionally”,
+                                    str_detect(smoking_status, “rendszeresen”) ~ “Regularly”,
+                                    TRUE ~ NA_character_),
+         across(ph_activity_1:ph_activity_3, ~ case_when(str_detect(., “0 óra”) ~ 0,
+                                                         str_detect(., “0- 1 óra”) ~ .5,
+                                                         str_detect(., “1 -  2 óra”) ~ 1.5,
+                                                         str_detect(., “2 - 3 óra”) ~ 2.5,
+                                                         str_detect(., “4 - 5 óra”) ~ 4.5,
+                                                         str_detect(., “6 - 8 óra”) ~ 7,
+                                                         str_detect(., “8 óra fölött”) ~ 8,
+                                                         TRUE ~ NA_real_)),
+         caffeine_perday = case_when(str_detect(caffeine_perday, “nem fogyasztok koffeint”) ~ “No caffaine”,
+                                     (parse_number(caffeine_perday) == 1 |
+                                     parse_number(caffeine_perday) == 25 |
+                                     parse_number(caffeine_perday) == 55 |
+                                     parse_number(caffeine_perday) == 80 |
+                                     parse_number(caffeine_perday) == 100 |
+                                     parse_number(caffeine_perday) == 130) ~ “0-160 mg/day”,
+                                     (parse_number(caffeine_perday) == 160 |
+                                     parse_number(caffeine_perday) == 240) ~ “160-320 mg/day”,
+                                     (parse_number(caffeine_perday) == 320 |
+                                     parse_number(caffeine_perday) == 400) ~ “More than 320 mg/day”,
+                                     TRUE ~ NA_character_),
+         across(starts_with(“other_int”), ~recode(., !!!intolerances))
+         ) |>
+  rename_with(.fn = function(x) {
+    sapply(x, function(colname) {
+      first_val <- cs_raw[[colname]] |> na.omit() |> first()
+      recode(first_val, !!!intolerances)
+    })
+  }, .cols = starts_with(“other_int”)) |>
+  mutate(
+    across(starts_with(“histamine_int”):starts_with(“drugs_int”), ~ if_else(!is.na(.), 1, 0))
+    ) |>
+  select(PARTICIPANT_ID = participant_id, everything())
+```
+
+# Calculate composite scores based on a key table
+```{r}
+keys <- range_read(“1PfxCFjF23NyndTDsx6dYHHjcwlxpXuLhuZGlgPQqaaQ”)
+```
+
+## Look up reverse items (except for SSS, which are all reverse scored)
+```{r}
+reversing_lookup <- keys |>
+  filter(reversed == TRUE, !str_detect(item, “^sss_“)) |>
+  mutate(reverse_const = scale_min + scale_max) |>
+  select(item, reverse_const) |>
+  deframe()
+
+cs_clean <- cs_clean |>
+  mutate(across(
+    any_of(names(reversing_lookup)),
+    ~ reversing_lookup[[cur_column()]] - .x
+  ))
+
+items_long <-
+  cs_clean |>
+  select(PARTICIPANT_ID, any_of(keys$item)) |>
+  pivot_longer(cols = -PARTICIPANT_ID, names_to = “item”, values_to = “value”) |>
+  left_join(keys, by = “item”) |>
+  mutate(value_ordered = value)
+```
+
+## Calculate scales and subscales in long format
+```{r}
+scales <- items_long |>
+  group_by(PARTICIPANT_ID, scale_id) |>
+  summarise(mean = mean(value_ordered, na.rm = TRUE), .groups = “drop”) |>
+  drop_na(scale_id)
+
+subscales <- items_long |>
+  group_by(PARTICIPANT_ID, subscale_id) |>
+  summarise(mean = mean(value_ordered, na.rm = TRUE), .groups = “drop”) |>
+  drop_na(subscale_id)
+```
+
+## Pivot to wide format
+```{r}
+scales_wide <- scales |>
+  pivot_wider(names_from = scale_id, values_from = mean)
+
+subscales_wide <- subscales |>
+  pivot_wider(names_from = subscale_id, values_from = mean)
+```
+
+## Merge scales and subscales
+```{r}
+cs_scores <- scales_wide |>
+  left_join(subscales_wide, by = “PARTICIPANT_ID”)
+```
+
+## Update cs_clean with the new scores
+```{r}
+cs_clean <- cs_clean |>
+  left_join(cs_scores, by = “PARTICIPANT_ID”)
+```
+
+# Calculate other composite scored
+```{r}
+cs_clean <- cs_clean |>
+  mutate(
+    other_int_count = rowSums(across(ends_with(“_int”)), na.rm = TRUE),
+    physical_activity_score = ph_activity_1 + ph_activity_2 + ph_activity_3*2,
+    caff_intox_mean = rowMeans(across(c(caff_intox_1:caff_intox_12)), na.rm = TRUE)
+  )
+```
+
+# Re-organize the dataset
+```{r}
+cs_clean <- cs_clean |>
+  relocate(physical_activity_score, .after = ph_activity_3) |>
+  relocate(caff_intox_mean, .after = caff_intox_12) |>
+  relocate(other_int_count, .after = caffeine_perday) |>
+  relocate(
+    hexaco_openness_to_experience,
+    hexaco_conscientiousness,
+    hexaco_agreeableness,
+    hexaco_extraversion,
+    hexaco_emotionality,
+    hexaco_honesty_humility,
+    .after = hexaco_60
+    ) |>
+  relocate(
+    hexaco_aesthetic_appreciation,
+    hexaco_anxiety,
+    hexaco_creativity,
+    hexaco_dependence,
+    hexaco_diligence,
+    hexaco_fairness,
+    hexaco_fearfulness,
+    hexaco_flexibility,
+    hexaco_forgiveness,
+    hexaco_gentleness,
+    hexaco_greed_avoidance,
+    hexaco_inquisitiveness,
+    hexaco_liveliness,
+    hexaco_modesty,
+    hexaco_organization,
+    hexaco_patience,
+    hexaco_perfectionism,
+    hexaco_prudence,
+    hexaco_sentimentality,
+    hexaco_sincerity,
+    hexaco_sociability,
+    hexaco_social_boldness,
+    hexaco_social_self_esteem,
+    hexaco_unconventionality,
+    .after = hexaco_honesty_humility
+  ) |>
+  relocate(
+    maia_interoceptive_awareness,
+    maia_noticing,
+    maia_not_distracting,
+    maia_not_worrying,
+    maia_attention_regulation,
+    maia_emotional_awareness,
+    maia_self_regulation,
+    maia_body_listening,
+    maia_trusting,
+    .after = maia_32
+  ) |>
+  relocate(
+    cerq_cognitive_emotion_regulation,
+    cerq_self_blame,
+    cerq_acceptance,
+    cerq_focus_on_thought_rumination,
+    cerq_positive_refocusing,
+    cerq_refocus_on_planning,
+    cerq_positive_reappraisal,
+    cerq_putting_into_perspective,
+    cerq_catastrophizing,
+    cerq_blaming_others,
+     .after = cerq_36
+  ) |>
+  relocate(
+    berq_behavioral_emotion_regulation,
+    berq_actively_approaching,
+    berq_seeking_distraction,
+    berq_seeking_social_support,
+    berq_ignoring,
+    berq_withdrawal,
+    .after = berq_20
+  ) |>
+  relocate(
+    sss_sensation_seeking,
+    sss_disinhibition,
+    sss_boredom_susceptibility,
+    sss_thrill_and_adventure_seeking,
+    sss_experience_seeking,
+    .after = sss_40
+  ) |>
+  relocate(
+    asps_sensory_processing,
+    asps_overresponsiveness_to_vestibular_input,
+    asps_overresponsiveness_to_auditory_input,
+    asps_overresponsiveness_to_visual_input,
+    asps_overresponsiveness_to_social_touch,
+    asps_proprioceptive_seeking,
+    asps_overall_underresponsiveness,
+    asps_underresponsiveness_to_proprioceptive_vestibular_input_affecting_postural_motor_abilities,
+    asps_intolerance_to_movement,
+    .after = asps_40
+  ) |>
+  relocate(
+    psrs_stress_reactivity,
+    psrs_reactivity_to_work_overload,
+    psrs_prolonged_reactivity,
+    psrs_reactivity_to_social_conflict,
+    psrs_reactivity_to_social_evaluation,
+    psrs_reactivity_to_failure,
+    .after = psrs_23
+  ) |>
+  relocate(
+    pms_locus_of_control,
+    .after = pms_7
+  )
+```
+
+# Exclusion
+```{r}
+cs_clean <- cs_clean |>
+  filter(
+    # Must have non-missing caff_sens
+    !is.na(caff_sens),
+    # Must have all 12 caff_intox items non-missing
+    if_all(caff_intox_1:caff_intox_12, ~ !is.na(.)),
+    # Attention checks must match expected answers
+    att_check_1 == 1,
+    att_check_2 == 2,
+    att_check_3 == 3,
+    # Honesty report must be “yes”
+    honesty_report == “Yes”
+  )
+
+write_csv(cs_clean, “data/true/caffeine_sensitivity_clean.csv”)
+```

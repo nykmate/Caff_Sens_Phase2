@@ -31,15 +31,168 @@ library(rsample)
 english <- read_csv("data/raw/caffeine_sensitivity_english_clean.csv") %>%
   filter(caff_intox_revised_13 == 4) %>%
   mutate(sample = "English") %>%
-  select(sample, age, gender, caff_sens, caffeine_perday, caff_intox_revised_1:caff_intox_revised_12)
+  select(PROLIFIC_PID, sample, age, gender, caff_sens, caffeine_perday, caff_intox_revised_1:caff_intox_revised_12)
 
 hungarian <- read_csv("data/raw/caffeine_sensitivity_clean copy.csv") %>%
   filter(if_all(
       all_of(paste0("caff_intox_revised_", 1:12)),
-      ~ !is.na(.x))) %>%
+      ~ !is.na(.x)), age != 99) %>%
   mutate(caff_sens = factor(caff_sens, levels = c(0, 1), labels = c("No", "Yes"))) %>%
   mutate(sample = "Hungarian") %>%
-  select(sample, age, gender, caff_sens, caffeine_perday, caff_intox_revised_1:caff_intox_revised_12)
+  select(PARTICIPANT_ID, sample, age, gender, caff_sens, caffeine_perday, caff_intox_revised_1:caff_intox_revised_12)
 
 caff_sens_invariance <- bind_rows(english, hungarian)
+```
+
+```{r}
+caff_sens_invariance$sample <- factor(
+  caff_sens_invariance$sample,
+  levels = c("Hungarian", "English")
+)
+```
+
+```{r}
+#Defining model
+bifactor_model_invariance <- '
+
+  G =~ caff_intox_revised_1 +
+       caff_intox_revised_2 +
+       caff_intox_revised_3 +
+       caff_intox_revised_4 +
+       caff_intox_revised_5 +
+       caff_intox_revised_6 +
+       caff_intox_revised_7 +
+       caff_intox_revised_8 +
+       caff_intox_revised_9 +
+       caff_intox_revised_10 +
+       caff_intox_revised_12
+
+  F1 =~ caff_intox_revised_1 +
+        caff_intox_revised_4 +
+        caff_intox_revised_6
+
+  F2 =~ caff_intox_revised_5 +
+        caff_intox_revised_6 +
+        caff_intox_revised_7 +
+        caff_intox_revised_8 +
+        caff_intox_revised_9 +
+        caff_intox_revised_10 +
+        caff_intox_revised_12
+
+  G ~~ 0*F1
+  G ~~ 0*F2
+  F1 ~~ 0*F2
+'
+```
+
+```{r}
+#Configural model testing
+syntax_config <- measEq.syntax(
+  configural.model = bifactor_model_invariance,
+  data = caff_sens_invariance,
+  group = "sample",
+  ordered = invariance_items,
+  parameterization = "theta",
+  ID.fac = "std.lv",
+  ID.cat = "Wu.Estabrook.2016"
+)
+
+fit_configural <- cfa(
+  bifactor_model_invariance,
+  data = caff_sens_invariance,
+  group = "sample",
+  estimator = "WLSMV",
+  ordered = invariance_items,
+  std.lv = TRUE
+)
+
+summary(
+  fit_configural,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
+```
+
+```{r}
+#Metric model testing
+syntax_metric <- measEq.syntax(
+  configural.model = bifactor_model_invariance,
+  data = caff_sens_invariance,
+  group = "sample",
+  ordered = invariance_items,
+  parameterization = "theta",
+  ID.fac = "std.lv",
+  ID.cat = "Wu.Estabrook.2016",
+  group.equal = c("thresholds")
+)
+
+fit_metric <- cfa(
+  as.character(syntax_metric),
+  data = caff_sens_invariance,
+  group = "sample",
+  estimator = "WLSMV",
+  ordered = invariance_items,
+  std.lv = TRUE
+)
+
+summary(
+  fit_metric,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
+```
+
+```{r}
+comparison <- compareFit(
+  fit_configural,
+  fit_metric
+)
+
+summary(comparison)
+```
+
+```{r}
+#Scalar model testing
+syntax_scalar <- measEq.syntax(
+  configural.model = bifactor_model_invariance,
+  data = caff_sens_invariance,
+  group = "sample",
+  ordered = invariance_items,
+  parameterization = "theta", # vagy "delta"
+  ID.fac = "std.lv",
+  ID.cat = "Wu.Estabrook.2016",
+  group.equal = c("thresholds", "loadings")
+)
+
+fit_scalar <- cfa(
+  as.character(syntax_scalar),
+  data = caff_sens_invariance,
+  group = "sample",
+  estimator = "WLSMV",
+  ordered = invariance_items,
+  std.lv = TRUE
+)
+
+summary(
+  fit_scalar,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
+```
+
+```{r}
+comparison_2 <- compareFit(
+  fit_metric,
+  fit_scalar
+)
+
+summary(comparison_2)
+```
+
+```{r}
+
+```
+
+```{r}
+
 ```

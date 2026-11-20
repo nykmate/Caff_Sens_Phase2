@@ -28,7 +28,7 @@ library(rsample)
 
 ```{r}
 caff_revised_exploratory <- read_csv("data/raw/caffeine_sensitivity_clean copy.csv") %>%
-  filter(if_all(caff_intox_revised_1:caff_intox_revised_12, ~ !is.na(.))) %>%
+  filter(if_all(caff_intox_revised_1:caff_intox_revised_12, ~ !is.na(.)), age != 99) %>%
   select(age, gender, caff_sens, caffeine_perday)
 ```
 
@@ -41,7 +41,10 @@ caff_revised_exploratory %>%
 caff_revised_exploratory %>%
   summarise(
     mean_age = mean(age, na.rm = TRUE),
-    sd_age = sd(age, na.rm = TRUE)
+    sd_age = sd(age, na.rm = TRUE),
+    median_age = median(age, na.rm = TRUE),
+    minimum = min(age, na.rm = TRUE),
+    maximum = max(age, na.rm = TRUE)
   )
 ```
 
@@ -58,7 +61,7 @@ caff_revised_exploratory %>%
 ```{r}
 caff_exploratory <- read_csv("data/raw/caffeine_sensitivity_clean copy.csv") %>%
   mutate(start_date = as.Date(start_date)) %>%
-  filter(start_date < as.Date("2025-05-21")) %>%
+  filter(start_date < as.Date("2025-12-14")) %>%
   select(age, gender, caff_sens, caffeine_perday)
 ```
 
@@ -71,7 +74,10 @@ caff_exploratory %>%
 caff_exploratory %>%
   summarise(
     mean_age = mean(age, na.rm = TRUE),
-    sd_age = sd(age, na.rm = TRUE)
+    sd_age = sd(age, na.rm = TRUE),
+    median_age = median(age, na.rm = TRUE),
+    minimum = min(age, na.rm = TRUE),
+    maximum = max(age, na.rm = TRUE)
   )
 ```
 
@@ -100,7 +106,10 @@ caff_sens_english %>%
 caff_sens_english %>%
   summarise(
     mean_age = mean(age, na.rm = TRUE),
-    sd_age = sd(age, na.rm = TRUE)
+    sd_age = sd(age, na.rm = TRUE),
+    median_age = median(age, na.rm = TRUE),
+    minimum = min(age, na.rm = TRUE),
+    maximum = max(age, na.rm = TRUE)
   )
 ```
 
